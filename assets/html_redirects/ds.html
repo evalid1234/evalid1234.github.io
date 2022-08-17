@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+    <!--
+        Miniport by HTML5 UP
+        html5up.net | @ajlkn
+        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    -->
+<html>
+    <head>
+        <title>E.L. School Portfolio </title>
+        <link rel="icon" type="image/x-icon" href="/images/fav.ico">
+        <meta charset="utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/assets/css/main.css"/>
+        <script type="module" src="/assets/js/p_c.js"></script>
+    </head>
+    <body class="is-preload">
+        <custom-nav></custom-nav>
+        <!-- add body here  -->
+        <article id="top" class="wrapper style1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-7-large col-12-medium">
+                        <header>
+                            <h1>Data Structures and Algorithms</h1>
+                        </header>
+                        <h2>What is Data Structures</h2>
+                            <p>
+                                Data Structures and Algorithms primarily analyzes the time/space efficiency of coding implementations and Algorithms. Athough hardware affects running times of programs, programs are typically compared using the RAM model of computation, which allows for comparison on a much more predicatble and fair way. Efficiency can primarily be improved by the careful organization (structures) of data, as well as by the logic (algorithms) the programmer implements.
+                            </p>
+                        
+                        <h2>Analyzing Programs</h2>
+                        
+                            <h3>Why not just time programs to compare?</h3>
+                            <p>
+                                Simply analzying program times is undesired as many times running times are machine dependent. This also rarely allow for testing all inputs and rarely represents the worse case scenarios. Instead, we compare using  the <b>RAM model of computation as a base</b>, with time complexities/growth rates described by <b>bounding functions</b>. The RAM model in essence measures the time of an algorithm by summing the "time" units or steps  needed to complete the algorithm. the following are the bases of the RAM model:
+                                <ul>
+                                    <li>Basic logical or arithmetic operations (+, *, =, if, call) are considered to be simple operations that take one time
+                                    step</li>
+                                    <li>Loops and subroutines are complex operations composed of multiple time steps.</li>
+                                    <li>• All memory access takes exactly one time step.</li>
+                                    <li>memory is considered infinite and does not limit  an algorithms completion </li>
+                                </ul>
+                               
+                                <ul>
+                                    <li>Worse case bound: f(n) = O(g(n))</li>
+                                    <li>Best case bound: f(n) = Ω(g(n))</li>
+                                    <li>Average case bound: f(n) = ϴ(g(n))</li>
+                                </ul>
+                                without defining them rigurously, the upperbound function <b>Big O</b> defines the worst or greatest amount of time an algorithm can take to complete. more formally Ο(f(n)) = { g(n) : there exists c > 0 and n0 such that f(n) ≤ c.g(n) for all n > n0. }. The lower bound is nearly always useless to conjecture as best case scenarios arent what we prepare for so we wont discuss here. And the average bound express both lower and upper bounds. formally: θ(f(n)) = { g(n) if and only if g(n) = Ο(f(n)) and g(n) = Ω(f(n)) for all n > n0. }
+                                . With all this in place we can compare the <b>growth</b> rate of programs and can compare them more formally. In most cases we use the <b>Big O</b> or worst case bounding when we compare program growths.
+                        
+                            </p>
+                        
+                        <h2>Structures</h2>
+                           
+                                <h2> I will not be describing the nature of the algorithm, simply stating them as this is more for documentation than information.
+                                Basic structures include:
+                                <h3>Array</h3>
+                                        <p>The array is a list of items stored in contiguous memory locations, typically of the same type where the position of each element is easy to find by simply using an offset to find each location.  
+                                        The time complexities of most array operations are listed below. (*the operations in an array are sometimes dependent on the algorthim as well as structuring of the elements. For
+                                        example: sorted, vs unsorted.)
+                                        </p>
+                                        <ul><li>Sorted Array:</li>
+                                            <li>Search(index): O(1)</li>
+                                            <li>Search (element): linear Search: O(n) - binary search: O(log n) </li>
+                                            <li>insert at end: O(1)</li>
+                                            <li>insert at position: O(n) (since the array will need to shuffle elements if inserted in position 0)</li>
+                                            <li>remove at end: O(1)</li>
+                                            <li>remove at index: O(n) ( same as insert, reversed shuffling ) </li>
+                       
+                            <h3>Linked List </h3>
+                            <p>
+                                A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The
+                                elements in a linked list are linked using pointers to memory locations.
+                                <ul>  
+                                   
+                                    <li> Search(index): O(n)</li>
+                                    <li> Search(Element): O(n)</li>
+                                    <li> Insert(index): O(n) **including the search** Else: O(1)</li>
+                                    <li> insert(head): O(1)</li>
+                                    <li> delete(index): O(n) **including the search** Else: O(1)</li>
+                                </ul>
+                            </p>
+                            <h3> Doubly Linked List </h3>
+                            <p>
+                                A Doubly linked list is  similar to the Singly Linked List with an extra pointer at its end for faster insertion and deletion at the ends.
+                            <ul>
+                                
+                                <li> Search(index): O(n)</li>
+                                <li> Search(Element): O(n)</li>
+                                <li> Insert(index): O(n) **including the search** Else: O(1)</li>
+                                <li> insert(head) Insert(End): O(1)</li>
+                                <li> delete(index): O(n) **including the search** Else: O(1)</li>
+                                <li>delete(end): O(1)</li>
+                            </ul>
+                            </p>
+                            <h3>Queue and Stack</h3>
+                            <p>
+                                Queues and stacks are abstract data types that can be implemented using arrays or linked lists. Queues abide by fifo(first in first out) Principles, while stacks abide by LIFO (Last in first out) principles. Both, have equivalent time complexities for their main operations.
+                            <ul>
+                                <li> Search(index): O(n)</li>
+                                <li> Search(Element): O(n)</li>
+                                <li> Push(Stack End) Enqueue(Queue):O(1)</li>
+                                <li> Pop(Stack End) Dequeue(Queue Front):O(1)</li>
+                            </ul>
+                            </p>
+                            <h3> Hash Tables </h3>
+                            <p>
+                                A Hash Table is a Map structure that allows for fast look up and insertions based on key value pairs with unique hash function relations that are based on the elements themselves. Most hashes use a value from the item, the table size and modulus operation as the primary hash for indexing and in collision resoultions. ex: indexing an integer of value 3 in table of size 13 would result in a hash function of 3%13--> index:3.  <b>Collisions occur when two elements have the same index after hashing</b> and are handled either by close hashing (using linked lists) or open hashing (linear probing, quadratic probing, double hashing..).Basic principles of hashing include keeping table size to a certain percentage for faster collision resolutions (typically 70%), keeping table sizes as prime numbers and keeping data from becoming uniform as this typically leads to more collision.
+                            <ul>
+                            
+                                <li> Search(Element): O(n) **however average is closer to O(1) with proper collison resolution and resizing to keep table less than a certain % from full.</li>
+                                <li> Insert(Element): O(n) **however average is closer to O(1) with proper collison resolution and resizing to keep table less than a certain % from full.</li>
+                                <li> delete(index): O(n) **however average is closer to O(1) with proper collison resolution and resizing to keep table less than a certain % from full.</li>
+                            </ul>
+                            </p>
+                        <h2>Trees</h2>
+        
+                            <p> TA tree is non-linear and a hierarchical data structure consisting of a collection of nodes such that each node of the
+                            tree stores a value and a list of references to other nodes (geeks for geeks definition). They consist of Leaves, parents, children and the root. The common trees are the binary tree, the binary search tree, and the avl tree. All of which have restrictions imparted to better organize data and optimize operation times. In short the binary tree is one where each node/element has at most 2 children. The Binary Search Tree is a binary tree with the added condition that left children are less than their parent node and  right children are greater than their parent node. The AVL Tree is a BST that has a self balancing height condition that provides a more balanced tree.</p>
+                            <ul>
+                                <li><h4>Binary Tree</h4></li>
+                                  <li>search: O(n)</li>
+                                  <li>insert: O(n)</li>
+                                  <li>delete: O(n)</li>
+                                <li><h4>Binary Search Tree</h4></li>
+                                <li>search: O(h) == O(n)</li>
+                                <li>insert: O(h) == O(n)</li>
+                                <li>delete: O(h) == O(n)</li>
+                                <li><h4>AVL Tree</h4></li>
+                                <li>search: O(log n)</li>
+                                <li>insert: O(log n)</li>
+                                <li>delete: O(log n)</li>
+                            </ul>
+                            <h2>Sorting</h2>
+                            <p> 
+                                Sorting is the organization of related data given a value of comparison which can be ascending or descending. As easy as this sounds there are many ways to achieve this, but not many ways to do it fast.Things to note are if the algorithms are <b> stable or unstable </b> (keep order in which they entered the list), if algorithms require extra space. Whether they are recursive and manage recursion well since stack sizes are relatively small. Below are common algorithms: 
+                                <ul>
+                                    <li>Selection sort</li>
+                                    <li>Time:   Space: </li>
+                                    <li>Bubble sort</li>
+                                    <li>Time: Space: </li>
+                                    <li>Insertion sort</li>
+                                    <li>Time: Space: </li>
+                                    <li>Merge sort</li>
+                                    <li>Time: Space: </li>
+                                    <li> Quick sort</li>
+                                    <li>Time: Space: </li>
+                                    <li> Heap sort</li>
+                                    <li>Time: Space: </li>
+                                    <li>Counting sort</li>
+                                    <li>Time: Space: </li>
+                                    <li>Radix sort</li>
+                                    <li>Time: Space: </li>
+                                    <li>Bucket sort</li>
+                                    <li>Time: Space: </li>
+                                </ul>
+                            </p>
+                        <h2>Graphs</h2>
+                        <div>
+                            <h3>Synopsis</h3>
+                            <p>
+                        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <custom-footer></custom-footer>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
