@@ -62,6 +62,10 @@ article>header {
 .flex_container h2 {
     text-align: center;
 }
+.flex_container section>header>div {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* --------details and messages --------*/
@@ -148,7 +152,7 @@ details>summary:hover {
 /*--------Main section--------*/
 .main_container {
     border-bottom: 2px solid;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 20%;
 }
 
@@ -360,7 +364,7 @@ form input {
 @media screen and (max-width:700px) {
     .hamburger_menu {
         display: block;
-        margin-left: 10px;
+        padding-left: 10px;
         color:white;
         cursor:pointer;
     }
