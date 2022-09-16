@@ -15,11 +15,17 @@ function myFunction() {
   }
 } 
 
-const nav = document.querySelector('.hamburger_menu');
+const hamburger_menu = document.querySelector('.hamburger_menu');
 const links = document.querySelectorAll('.item');
 function toggle(link) {
-  link.classList.toggle('item')
+  link.classList.toggle('item');
 }
-nav.addEventListener('click', () => {
+hamburger_menu.addEventListener('click', () => {
   links.forEach(toggle);
 });
+function checkIfClicked(element) {
+  element.addEventListener('click',()=> {
+    links.forEach(toggle);
+  });
+}
+links.forEach(checkIfClicked)
