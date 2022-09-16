@@ -360,6 +360,12 @@ form input {
 @media screen and (max-width:700px) {
     .hamburger_menu {
         display: block;
+        margin-left: 10px;
+        color:white;
+        cursor:pointer;
+    }
+    .hamburger_menu:hover { 
+        opacity: 75%;
     }
 
     .item {
