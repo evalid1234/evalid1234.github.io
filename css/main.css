@@ -1,0 +1,386 @@
+/* add fonts here.*/
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
+/*-------- GENERAL CONTENT --------*/
+
+/*--------article/main wrappers--------*/
+.tutoring_contact_container {
+    padding: 0 15%;
+    min-height: 100vh;
+    border-bottom: 2px solid;
+}
+
+article {
+    height: fit-content;
+    border-bottom: 2px solid;
+}
+
+.flex_container {
+    display: flex;
+    padding: 0 15%;
+    min-height: 100vh;
+}
+
+.flex_container section,
+.tutoring_container section {
+    padding: 10px;
+}
+
+article section h3 {
+    text-align: center;
+}
+
+article>header {
+    text-align: center;
+}
+
+.main_container,
+.flex_container,
+.tutoring_container {
+    text-align: justify;
+}
+
+.main_container h1,
+.flex_container h2 {
+    text-align: center;
+}
+
+
+/* --------details and messages --------*/
+details {
+    font-size: 1rem;
+}
+
+details ul {
+    margin-left: 5px;
+}
+
+details li ul {
+    margin-left: 15px;
+}
+
+details li>ul li {
+    margin-left: 15px;
+}
+
+details>summary {
+    text-align: center;
+    color: #006b8d;
+    display: block;
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+details>summary:hover {
+    color: #529ec3;
+}
+
+
+/* --------alignment--------*/
+.flex_container {
+    flex-wrap: wrap;
+}
+
+.flex_container section {
+    flex: 0 1 33%;
+}
+
+
+/*-------- buttons --------*/
+.button {
+    background-color: #006b8d;
+    border-radius: 20px;
+    font-size: .8em;
+    padding: 20px 10px;
+    transition-duration: 0.2s;
+    box-shadow: 0 9px #999;
+}
+
+.button a {
+    padding: 30px 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:hover {
+    opacity: 75%;
+    background-color: #529ec3;
+}
+
+.button:active {
+    background-color: #529ec3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button_container {
+    margin: 10px 0;
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button_container .button {
+    height: min-content;
+}
+
+/*--------SPECIFIC CONTENT---------*/
+
+
+/*--------Main section--------*/
+.main_container {
+    border-bottom: 2px solid;
+    height: 100vh;
+    padding: 0 20%;
+}
+
+.main_container header {
+    margin: 10px 0;
+}
+
+.main_container p {
+    margin: 30px 0;
+}
+
+.main_container .button {
+    display: block;
+
+    margin: 0 auto;
+}
+
+/*--------navigation--------*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky~.content {
+    padding-top: 60px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #006b8d;
+}
+
+.hamburger_menu {
+    display: none;
+}
+
+.navigation li {
+    flex: 0 1 auto;
+    padding: 10px 0;
+    list-style-type: none;
+    margin-right: 3px;
+}
+
+.navigation li:hover {
+    background-color: #529ec3;
+}
+
+.navigation a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover {
+    opacity: 75%;
+}
+
+/*--------about--------*/
+
+#about>header {
+    flex: 0 1 100%;
+}
+
+#about section {
+    flex: 0 1 33%;
+}
+
+
+/*--------courses--------*/
+#courses section {
+    border: 1px solid;
+}
+
+/*--------projects--------*/
+
+#projects img {
+    max-width: 100%;
+}
+
+#projects>.flex_container summary {
+    text-align: left;
+    border-bottom: none;
+}
+
+#projects>.flex_container summary:hover {
+    text-decoration: underline;
+}
+
+#projects>.flex_container section {
+    border: solid;
+}
+
+#projects>.flex_container section a {
+    display: block;
+    width: 100%
+}
+
+#projects>.flex_container section a:hover {
+    color: #529ec3;
+}
+
+/*--------Tutoring--------*/
+#tutoring {
+    flex-direction: column;
+    border-bottom: 2px solid;
+}
+
+#tutoring ul li {
+    margin-left: 20px;
+}
+
+/*--------contact--------*/
+#contact {
+    height: 100vw;
+    background-color: #2f4858;
+    color: #fff;
+}
+
+form {
+    margin: 15px auto;
+    background-color: #fff;
+    color: #2f4858;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;
+    align-items: center; */
+    padding: 20px;
+}
+
+form .button {
+    background-color: hsl(203, 30%, 26%);
+}
+
+form .button:hover {
+    background-color: hsl(203, 30%, 50%);
+}
+
+form .button:active {
+    background-color: hsl(203, 30%, 50%);
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+form textarea {
+    padding-bottom: 50px;
+}
+
+form label {
+    font-weight: 700;
+}
+
+form input {
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.header {
+    padding: 5px 0;
+}
+
+#contact .button {
+    color: white;
+    cursor: pointer;
+}
+
+#contact>header {
+    text-align: center;
+    flex: 0 1 100%;
+}
+
+/*--------footer--------*/
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+#footer>header {
+    text-align: center;
+    flex: 0 1 100%;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+#footer li {
+    margin: 0 2px;
+    list-style-type: none;
+}
+
+#footer a {
+    color: white;
+}
+
+#footer a:hover {
+    color: hsl(203, 30%, 50%);
+}
+
+@media screen and (max-width:700px) {
+    .hamburger_menu {
+        display: block;
+    }
+
+    .item {
+        display: none;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .navigation li {
+        flex: 0 1 100%;
+    }
+
+    #about section {
+        flex: 0 1 100%;
+    }
+
+    .flex_container section {
+        flex: 0 1 100%;
+    }
+}
