@@ -368,7 +368,7 @@ form input {
 
 /* animation */
 .animate { 
-    animation: changecolors 2s linear forwards infinite alternate;
+    animation: changecolors 2s linear forwards 1 alternate;
 }
 
 
