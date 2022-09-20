@@ -380,14 +380,14 @@ form input {
 
 /* animation */
 .animation_container {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 .animation_divLeft,
 .animation_divRight,
 .animation_message { 
-    display: inline-flex;
+    display: flex;
     flex-wrap: nowrap;
     text-align: center;
 }

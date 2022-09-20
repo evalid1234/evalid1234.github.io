@@ -34,9 +34,9 @@ links.forEach(checkIfClicked)
 
 
 /*message*/
-const message = document.querySelector('.animation_message');
-message.addEventListener("animationiteration", listener, false);
-
+// const message = document.querySelector('.animation_message');
+// message.addEventListener("animationiteration", listener, false);
+// 
 let count = 1;
 function listener(event) {
   switch (event.type) {
