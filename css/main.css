@@ -10,9 +10,13 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    overflow-x: hidden;
+}
 
 body a {
     text-decoration: none;
+    
 }
 
 body a:hover {
@@ -20,6 +24,15 @@ body a:hover {
 }
 
 /*-------- GENERAL CONTENT --------*/
+
+/* fading */ 
+.fade_in { 
+    opacity: 0;
+    transition: opacity 1s ease-in ;
+}
+.fade_in.appear {
+    opacity: 1;
+}
 
 /*--------article/main wrappers--------*/
 .tutoring_contact_container {
@@ -29,13 +42,13 @@ body a:hover {
 }
 
 article {
-    height: fit-content;
+    /* height: fit-content; */
     border-bottom: 2px solid;
 }
 
 .flex_container {
     display: flex;
-    padding: 0 15%;
+    /* padding: 0 15%; */
     min-height: 100vh;
 }
 
@@ -52,49 +65,19 @@ article>header {
     text-align: center;
 }
 
-.main_container,
+/* .main_container,
 .flex_container,
 .tutoring_container {
     text-align: justify;
-}
+} */
 
-.main_container h1,
+/* .main_container h1,
 .flex_container h2 {
     text-align: center;
-}
+} */
 .flex_container section>header>div {
     display: flex;
     justify-content: center;
-}
-
-
-/* --------details and messages --------*/
-details {
-    font-size: 1rem;
-}
-
-details ul {
-    margin-left: 5px;
-}
-
-details li ul {
-    margin-left: 15px;
-}
-
-details li>ul li {
-    margin-left: 15px;
-}
-
-details>summary {
-    text-align: center;
-    color: #006b8d;
-    display: block;
-    border-bottom: 1px solid;
-    cursor: pointer;
-}
-
-details>summary:hover {
-    color: #529ec3;
 }
 
 
@@ -104,7 +87,7 @@ details>summary:hover {
 }
 
 .flex_container section {
-    flex: 0 1 33%;
+    flex: 1 1 33%;
 }
 
 
@@ -151,9 +134,11 @@ details>summary:hover {
 
 /*--------Main section--------*/
 main {
+    
     height: fit-content;
     border-bottom: 2px solid;
 }
+
 .main_container {
     border-bottom: 2px solid;
     min-height: 100vh;
@@ -225,7 +210,11 @@ main {
 
 /*--------about--------*/
 
+#about {
+    border-bottom: none;
+}
 #about>header {
+    
     flex: 0 1 100%;
 }
 
@@ -235,14 +224,37 @@ main {
 
 
 /*--------courses--------*/
+#courses {
+    min-height: 100vw;
+}
 #courses section {
-    border: 1px solid;
+    margin: 10px 10px;
+    padding: 0 15%;
+    flex: 1 1 100%;
+    display: flex;
+    text-align: center;
+    height:500px;
 }
 
-/*--------projects--------*/
+#courses section ul{ 
+    text-align: left;
+    flex: 1 1 50%;
+    
+}
 
-#projects img {
+#courses section div {
+    flex: 1 1 50%;
+}
+
+
+
+/*--------projects--------*/
+#projects {
+    padding:15%;
+}
+ img {
     max-width: 100%;
+    z-index: 0;
 }
 
 #projects>.flex_container summary {
@@ -367,26 +379,149 @@ form input {
 }
 
 /* animation */
-.animate { 
-    animation: changecolors 2s linear forwards 1 alternate;
+.animation_container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.animation_divLeft,
+.animation_divRight,
+.animation_message { 
+    display: inline-flex;
+    flex-wrap: nowrap;
+    text-align: center;
 }
 
 
-@keyframes changecolors {
+.animation_divRight { 
+    animation: move_right 3s linear infinite 1s alternate forwards;
+}
+.animation_divLeft{
+    animation: move_left 3s linear infinite 1s alternate forwards;
+}
 
-    100% {
-        transform: scaleX(1.01);
-        transform: scaleY(1.01);
+
+.animation_message > p { 
+    font-size: larger;
+}
+.animation_message { 
+    color:#fff;
+    animation: message 3s linear infinite 1s alternate forwards;
+}
+.p_container { 
+    flex: 1 1 auto;
+}
+.p_containerLeft { 
+    animation: move_right, move_left;
+    animation-duration: 3s,2s;
+    animation-delay: 0s, 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.arrow { 
+    width: 50px;
+    height: 50px;
+    border: solid ;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+}
+.slash { 
+    height: 50px;
+    border-width: 0 0 0 3px;
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.show {
+    display:none;
+}
+
+
+@keyframes message {
+    from {
+        display: inline-block;
+        color: #fff;
+        }
+    
+    to {
+        margin-left: 0;
+        margin-right: 0;
         color: #529ec3;
     }
 }
 
+ @keyframes move_right {
+    
+    from{
+        margin-left: 0;
+        color: #fff;
+    }
+    to { 
+        color: #529ec3;
+        margin-left:20%;
+    }
+} 
+@keyframes move_left {
+        from { 
+            margin-right: 0%;
+            color: #fff;
+        }
 
+        to {
+            color: #529ec3;
+            margin-right:20%;
+        }
+
+}
+
+@media screen and (max-width:400px) {
+    .arrow {
+            width: 20px;
+            height: 20px;
+        }
+    
+    .slash {
+        height: 20px;
+
+    }
+    .animation_message{
+        font-size: medium;
+    }
+
+    #courses section ul li  {
+        margin: inherit 20px;
+    }      
+    
+}
 @media screen and (max-width:700px) {
+    #courses section {
+            height: fit-content;
+    }
+    .arrow {
+            width: 25px;
+            height: 25px;
+        }
+    
+    .slash {
+        height: 25px;
+        
+    }
+    .animation_message {
+        font-size: medium;
+    }
     .hamburger_menu {
         display: block;
         color: #fff;
         cursor: pointer;
+        z-index: 1;
     }
     
     .hamburger_menu i {
@@ -402,13 +537,14 @@ form input {
         display: none;
     }
 
-    .navigation {
+    .navigation { 
         flex-wrap: wrap;
         padding: 0px;
         margin: 0;
     }
 
     .navigation li {
+        
         flex: 0 1 100%;
         transition-duration: .5s;
         transition-timing-function: ease;

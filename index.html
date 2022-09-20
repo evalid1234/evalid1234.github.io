@@ -20,7 +20,6 @@
             <ul class="navigation">
                 <li class="hamburger_menu"><i class="fa-solid fa-bars fa-2x"></i></li>
                 <li class="item"><a href="#home">Home</a> </li>
-                <li class="item"><a href="#about">About</a> </li>
                 <li class="item"><a href="#courses">Courses</a> </li>
                 <li class="item"><a href="#projects">Projects</a></li>
                 <li class="item"><a href="#tutoring">Tutoring</a></li>
@@ -30,30 +29,46 @@
 
 
         <!---------Introduction --------->
-        <main  class="main_container content" id="home"> 
-            <header class="animate">
-                <h1 style="text-align:center;">Welcome to my page!</h1>
+        <main  class="main_container content" id="home">
+
+
+            <header class="fade_in" style="text-align:center;">
+                <h2>About me </h2> 
             </header>
-            <p>
+            <p class="fade_in">
                 My name is <strong>Eduardo,</strong> and this is my <em><b>school portfolio</b></em>, the purpose of which is to summarize some of my coursework, personal
                 projects as well
                 as what I have learned. I am currently a senior at FIU ( Florida International University ) who is majoring in
                 Computer Science, with a minor in mathematics and a big interest in web based development. I Like working out, learning, and generally just having a good time. I offer tutoring for college related courses and have worked for FIU for some time as a learning assistant. 
             </p>
-            <button class="button"> <a href="#about"><b>Read more about me
-            </b></a></button>
-        </main>
+                
+            <div class="animation_container content fade_in">
 
-        <!---------about me --------->
+                <div class="animation_divLeft content">
+                    <p class="p_container"> <i class="arrow left"></i></p>
+                    <p class="p_container "><i class="arrow right"></i></p>
+                </div>
+
+                <div class="animation_message content">
+                    <p>Services</p>
+                </div>
+
+                <div class="animation_divRight content">
+                    <p class="p_container"> <i class="arrow left"></i></p>
+                    <p class="p_container"> <i class="arrow slash"></i></p>
+                    <p class="p_container"><i class="arrow right"></i></p>
+                    <header style="text-align:center;">
+                </div>
+            </div>
+
+                    <!---------about me --------->
         <article   class="content" id="about">
-            <header>
-                <h2>Overview of my time at school</h2> 
-            </header>
+    
         <!-- tutoring -->
-            <div class="flex_container">
-                <section>
+            <div class="flex_container ">
+                <section class="fade_in">
                     <header>
-                        <div ><i class="fa-solid fa-chalkboard-user fa-8x"></i></div>
+                        <div ><i class="fa-solid fa-chalkboard-user fa-6x"></i></div>
                         <h3>Tutoring</h3>
                     </header>
                     
@@ -66,9 +81,9 @@
                 </section>
 
                 <!--projects-->
-                <section>
+                <section class="fade_in">
                     <header>
-                        <div><i class="fa-solid fa-folder-open fa-8x"></i></div>
+                        <div><i class="fa-solid fa-folder-open fa-6x"></i></div>
                         <h3>Projects</h3>
                     </header>
                     <p style="text-align: left;">
@@ -80,10 +95,10 @@
                 </section>
 
                 <!--coursework-->
-                <section> 
+                <section class="fade_in"> 
                     <header>
                         <div >
-                            <i class="fa-solid fa-book fa-8x"></i>
+                            <i class="fa-solid fa-book fa-6x"></i>
                         </div>
                         <h3>Coursework</h3>    
                     </header>
@@ -101,234 +116,149 @@
     
         </article>
 
+        </main>
+
+
+
         <!---------courses--------->
         <article   class="content" id="courses">
             <header>
                 <h2>Courses</h2>
-                <p>This list in not exhaustive, but it includes some fun classes. Click them to read more!</p><br>
+                <p>This list is not exhaustive, but it includes some fun classes</p><br>
             </header>
             <!--ds-->
             <div class="flex_container">
-                <section>
-                    <details>
-                        <summary><h3>Data Structures & Algos</h3></summary>
-                        <p>
-                        <ul>
-                            <li><b> Summary: </b>Find formal parameters( namely, space and time complexity) as well as methods of
-                                comparison(asymptotic analysis) between
-                                different program implementations. We also compare abstract data types, their operation times, and common
-                                Algorithms to
-                                tackle complex problems.
-                            </li>
-                    
-                            <li><b>In class: </b>: We often went over a concept and immediately went on to program a structure or improve
-                                lagging code.</li>
-                            <li> <b>Learned: </b>
-                                <ul>
-                                    <li>Constructing more efficient programs</li>
-                                    <li>Comparing implementations by time efficiency</li>
-                                    <li>Learned how to analyze programs at a glance</li>
-                                    <li>Different structures and their pros/cons</li>
-                                    <li>Basic algorithms for dynamic programming: divide and conquer, greedy implementations,
-                                        multi-pointers, tail-recursion, caching etc..</li>
-                                    <li>Advanced algorithms like: djiskstras, bellmans fords,Kruskal etc.. </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <b>Grade: <strong> 'A' </strong></b>
-                        </p>
-                    </details>
+                <section >
+                    <header>
+                        <img class="fade_in" src="/images/pic01.jpg" width="300" height="300" alt="course photo">
+                        <h3>Data Structures & Algos</h3>
+                        <h4>Grade:  'A' </h4>
+                    </header>
+                    <ul class="fade_in" style="text-align: right;">
+                        <li><b>Learned:</b> </li>
+                        <li>Constructing more efficient programs</li>
+                        <li>Comparing implementations by time efficiency</li>
+                        <li>Learned how to analyze programs at a glance</li>
+                        <li>Different structures and their pros/cons</li>
+                        <li>Basic algorithms for dynamic programming: divide and conquer, greedy implementations,
+                            multi-pointers, tail-recursion, caching etc..</li>
+                        <li>Advanced algorithms like: djiskstras, bellmans fords,Kruskal etc.. </li>
+                    </ul>
                 </section>
 
                 <!--systems-->
                 <section>
-                    <details>
-                        <summary><h3>Systems Programming</h3></summary>
-                        <p>
-                            <ul>
-                                <li><b> Summary: </b> Programming in C and advanced programming in Unix environments, including multiprocessing
-                                    and multithreading
-                                </li>
-                        
-                                <li><b>In class: </b> In class, we reviewed and implemented basic c programs as well as learned to navigate our
-                                    local Unix environment using
-                                    VIM as our text editor. Further along, we implemented more complex programs such as flipping images by
-                                    altering known
-                                    pixels, as well as constructing our command line parser. There were also programs related to creating new
-                                    processes and
-                                    constructing multi-threaded applications.</li>
-                                <li>
-                                    <ul>
-                                        <b>Learned:</b>
-                                        <li>Programming in c, including pointers, structs etc..</li>
-                                        <li>Mastered dynamic memory management</li>
-                                        <li>Used processes and threads</li>
-                                        <li>Learned standard input/output</li>
-                                        <li>Programming in command line interfaces outside of IDEs, including makefiles,gcc, commandline
-                                            programs and gdb</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        <b>Grade: <strong> 'A' </strong></b>
-                        </p>
-                    </details>
+                    <ul class="fade_in">
+                        <b>Learned:</b>
+                        <li>Programming in c, including pointers, structs etc..</li>
+                        <li>Mastered dynamic memory management</li>
+                        <li>Used processes and threads</li>
+                        <li>Learned standard input/output</li>
+                        <li>Programming in command line interfaces outside of IDEs, including makefiles,gcc, commandline
+                            programs and gdb</li>
+                    </ul>
+                    <div>
+                        <img class="fade_in" src="/images/pic02.jpg" width="300" height="300"  alt="course photo">
+                        <h3>Systems Programming</h3>
+                        <h4>Grade:  'A' </h4>
+                    </div>
                 </section>
                 
                 <!--operating sys-->
                 <section>
-                    <details>
-                        <summary><h3>Operating Systems</h3></summary>
-                        <p>
-                            <ul>
-                                <li><b> Summary: </b> Operating systems design principles and implementation techniques. Address spaces, system call interface,
-                                process/threads, interprocess communication, deadlock, scheduling, memory, virtual memory, I/O, file systems.</li>
-                            
-                            
-                                <li><b>In Class: </b> In class, we reviewed operating system concepts such as the function of Kernels, the functions of an operating system,
-                                managing memory, file systems, concurrent and parallel programs, and more. To solidify concepts we generally implemented
-                                general theory in c. This includes projects such as handling batch processes, handling i/o processes, creating file
-                                systems, and creating a theoretical memory manager.</li>
-                                <li>
-                                    <ul>
-                                        <b>Learned: </b>
-                                        <li> Creating complex c programs</li>
-                                        <li> Using virtual memory</li>
-                                        <li>CPU scheduling</li>
-                                        <li>Threading</li>
-                                        <li>Memory Management</li>
-                                        <li>IO systems</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <b>Grade: <strong> 'A-' </strong></b>
-                        </p>
-                    </details>
+                    <header>
+                        <img  class="fade_in" src="/images/pic03.jpg" width="300" height="300" alt="course photo">
+                        <h3>Operating Systems</h3>
+                        <h4>Grade:  'A' </h4>
+                    </header>
+                        <ul class="fade_in" style="text-align: right;">
+                            <b>Learned: </b>
+                            <li> Creating complex c programs</li>
+                            <li> Using virtual memory</li>
+                            <li>CPU scheduling</li>
+                            <li>Threading</li>
+                            <li>Memory Management</li>
+                            <li>IO systems</li>
+                        </ul>    
                 </section>
                 
                 <!--software engineering-->
                 <section>
-                    <details>
-                        <summary><h3>Software Engineering</h3></summary>
-                        <p>
-                            <ul>
-                                <li><b> Summary: </b> Software Process Model, software analysis and specification, software design, testing
-                                </li>
-                            
-                                <li><b>In class: </b>We often worked in small groups(5-6 people) putting into practice the concepts we learned in class which included
-                                requirement gathering for in-class projects, implementing different software process models for medium-sized
-                                applications, working under different
-                                development life cycles and creating theoretical applications.</li>
-                                <li>
-                                    <ul>
-                                        <b>Learned: </b>
-                                        <li> Working in Groups</li>
-                                        <li> Documenting software</li>
-                                        <li>Creating software process models and architecture</li>
-                                        <li>Gathering software requirements</li>
-                                        <li>Communicating software details</li>
-                                        <li>Using Software Testing techniques</li>
-                                        <li>Working in development life cycles such as AGILE</li>
-                                        
-                                    </ul>
-                                </li>
-                            </ul>
-                            <b>Grade: <strong> 'A' </strong></b>
-                        </p>
-                    </details>
+                        <ul class="fade_in">
+                            <b>Learned: </b>
+                            <li> Working in Groups</li>
+                            <li> Documenting software</li>
+                            <li>Creating software process models and architecture</li>
+                            <li>Gathering software requirements</li>
+                            <li>Communicating software details</li>
+                            <li>Using Software Testing techniques</li>
+                            <li>Working in development life cycles such as AGILE</li>
+                        </ul>   
+                        <div>
+                            <img class="fade_in" src="/images/pic04.jpg" width="300" height="300"  alt="course photo">
+                            <h3>Software Engineering</h3>
+                            <h4>Grade:  'A' </h4>
+                        </div>
                 </section>
 
                 <!--software testing-->
                 <section>
-                    <details>
-                        <summary><h3>Software Testing</h3></summary>
-                        <p>
-                            <ul>
-                                <li><b> Summary: </b> Fundamentals of software testing. Topics include: test plan creation, test case generation,
-                                program inspections, specification-based and implementation-based testing, GUI testing,
-                                and testing tools.
-                                </li>
-                            
-                                <li><b>In class: </b> We went over concepts and immediately had to discuss as a class practice problems on the board with a teacher. Most of
-                                our workload consisted of exams in which we had example programs that we then tested using the methodologies we learned
-                                in class. This would consist of unit testing, mutation testing, data-flow testing, control flow testing, and more.</li>
-                                <li>
-                                    <ul>
-                                        <b>Learned: </b>
-                                        <li> Limits of testing </li>
-                                        <li> Goals of tesing </li>
-                                        <li>Using testing tools like junit</li>
-                                        <li>Black box testing: equivalence classes tesing, boundary value testing, state-transition testing.</li>
-                                        <li>White Box testing: program insections, control-flow/data flow testing etc..</li>
-                                        <li>Communicating software details</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <b>Grade: <strong> 'A' </strong></b>
-                        </p>
-                    </details>
+                    <header >
+                        <img class="fade_in" src="/images/pic05.jpg" width="300" height="300" alt="course photo">
+                        <h3>Software Testing</h3>
+                        <h4>Grade:  'A' </h4>
+                    </header>
+                        <ul class="fade_in" style="text-align: right;">
+                            <b>Learned: </b>
+                            <li> Limits of testing </li>
+                            <li> Goals of tesing </li>
+                            <li>Using testing tools like junit</li>
+                            <li>Black box testing: equivalence classes tesing, boundary value testing, state-transition testing.</li>
+                            <li>White Box testing: program insections, control-flow/data flow testing etc..</li>
+                            <li>Communicating software details</li>
+                        </ul>
                 </section>
 
                 <!--principles of languages-->
                 <section>
-                    <details>
-                        <summary><h3>Programming Languages</h3></summary>
-                        <p>
-                            <ul>
-                                <li><b> Principles of Programming Languages Summary: </b>A comparative study of several programming languages and paradigms. Emphasis is
-                                given to design, evaluation, and implementation. Programs are written in a few
-                                languages.
-                                </li>
-                            
-                                <li><b>In class: </b>We often discussed the theory of programming languages and the creation of new technologies as well as paradigms
-                                (imperative vs declarative) over time. We also had to create basic language syntaxes whether in code or by hand(creating
-                                a CFG) using the fundamentals required in language creation. In terms of work, we created various programs in f# to go
-                                over declarative programming paradigms.</li>
-                                <li>
-                                    <ul>
-                                        <b>Learned: </b>
-                                        <li> Mastered a functional language (f#) </li>
-                                        <li> Mastered Recursion </li>
-                                        <li> Became familiar with context free grammars to create programming language syntax</li>
-                                        <li> Created parse trees, and used recursive descent parsing </li>
-                                        <li>Covered scoping ( lexical and dynamic)</li>
-                                        <li>Covered attribute grammars</li>
-                                        <li>Distinguish between static and dynamic type checking</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <b>Grade: <strong> 'A' </strong></b>
-                        </p>
-                    </details>
+                        <ul class="fade_in">
+                                <b>Learned: </b>
+                                <li> Mastered a functional language (f#) </li>
+                                <li> Mastered Recursion </li>
+                                <li> Became familiar with context free grammars to create programming language syntax</li>
+                                <li> Created parse trees, and used recursive descent parsing </li>
+                                <li>Covered scoping ( lexical and dynamic)</li>
+                                <li>Covered attribute grammars</li>
+                                <li>Distinguish between static and dynamic type checking</li>
+                        </ul>
+
+                        <div >
+                            <img class="fade_in" src="/images/pic07.jpg" width="300" height="300" alt="course photo">
+                            <h3>Principles of Programming Languages</h3>
+                            <h4>Grade:  'A' </h4>
+                        </div>
                 </section>
 
                 <!--theory of algos-->
                 <section>
-                    <details>
-                        <summary><h3>Theory of Computations</h3></summary>
-                        <p>
-                            <ul>
-                                <li><b> Summary: </b>Strings, formal languages, finite state machines, Turing machines,
-                                primitive recursive and recursive functions, recursive unsolvability.
-                                </li>
-                                
-                                <li><b>In class: </b> we covered a great deal of theory as well as mathematical proofs. Most of our days revolved around defining terms, formalizing theorems, and going over in class examples of theoretical concepts.</li>
-                                <li>
-                                    <ul>
-                                        <b>Learned: </b>
-                                        <li> Regular Expressions </li>
-                                        <li> Regular Grammars </li>
-                                        <li> Goals of tesing </li>
-                                        <li> NFA and DFA</li>
-                                        <li>Closure properties</li>
-                                        <li> CFG </li>
-                                        <li>Turing Machines</li>
-                                        <li>recursive and primitve recursive functions</li> 
-                                    </ul>
-                                </li>   
-                            </ul>
-                            <b>Grade: <strong> 'B' </strong></b>
-                        </p>
-                    </details>
+                    <header>
+                        <img 
+                        class="fade_in"
+                        src="/images/pic08.jpg" width="300" height="300" alt="course photo">
+                        <h3>Theory of Algorithms</h3>
+                        <h4>Grade:  'B' </h4>
+                    </header>
+                        <ul class="fade_in" style="text-align: right;">
+                            <b>Learned: </b>
+                            <li> Regular Expressions </li>
+                            <li> Regular Grammars </li>
+                            <li> Goals of tesing </li>
+                            <li> NFA and DFA</li>
+                            <li>Closure properties</li>
+                            <li> CFG </li>
+                            <li>Turing Machines</li>
+                            <li>recursive and primitve recursive functions</li> 
+                        </ul>
                 </section>
 
                 <div class="button_container">
@@ -346,7 +276,7 @@
             </header>
             <div class="flex_container">
             <!-- sorting project -->
-            <section>
+            <section class="fade_in">
                 <h3>Sorting project</h3>
                 <a href="https://evalid1234.github.io/sorts/"><img src="images/sorting.jpg" height="300" width="900" alt="sorting project" target="_blank"></a>
                 <h4><a href="https://evalid1234.github.io/sorts/" target="_blank">Try me</a></h4>
@@ -365,7 +295,7 @@
                 </details>
             </section>
             <!-- stock project -->
-            <section>
+            <section class="fade_in">
                 <h3>Stock project (in progess)</h3>
                 <a href="https://floating-brushlands-07639.herokuapp.com/" ><img src="images/stock_site.jpg" height="300" width="900" alt="stock website project" target="_blank"></a>
                 <h4><a href="https://floating-brushlands-07639.herokuapp.com/" target="_blank">Try me</a></h4>
@@ -399,49 +329,33 @@
         </article>
 
         <!---------tutoring section--------->
-        <article   class="tutoring_contact_container content" id="tutoring">
+        <article   class="tutoring_contact_container content fade_in" id="tutoring">
             <header>
-                <h2>Tutoring Experience and skills learned</h2>
+                <h2>Tutoring Experience and Skills Learned</h2>
             </header>
 
-            <section> 
-                <h3>Communication</h3>
+            <section>
+                
                 <p>
-                Communication of central ideas was the most important aspect of my job. 
-                I had to adjust my communication style for every
-                individual. Many were reserved and required a more nuanced and non-stimulative approach to conversation. Others loved to
-                chat and were most engaged with high levels of energy and friendly rapport building mixed into our sessions.
-                Regardless, I had to learn to approach each individual in a way that was conducive to their learning style.
-                </p>
+                    As a tutor, I have learned to communicate and learn alongside many different personalities and learning styles. I was a tutor for two FIU tutoring services and I have learned/ relearned software and algorithm related question countless times. 
+                    I take pride in my work, and I worked tirelessly to help my tutees get th results they wanted. If you would like a tutor in any Computer Science courses, or want to know more about me, I have tutored:
+                    <ul>
+                        <li>
+                            Data Structures and algorithm
+                        </li>
+                        <li>
+                            Programming 1 
+                        </li>
+                        <li>Programming 2</li>
+                        <li>
+                            Discrete math
+                        </li>
+                        <li>
+                            Systems programming
+                        </li>
+                    </ul>
             </section>
 
-            <section>
-                <h3>Flexibility and learning</h3>
-                <p>
-                Additionally, the most challenging part of my job is having to relearn/rethink central ideas. Often, the way I learned
-                was far from the way others would learn. This required me to relearn or rewire my brain during a session
-                to re-express an idea. Examples of this often came with abstract structures or operating Systems concepts like threading
-                and processes. If the examples I made didn't work, I
-                would just need to rethink an example, or even find a different approach on the fly. Many times, I would often spend time outside of sessions to learn different ways of understanding upcoming topics. 
-                </p>
-            </section>
-
-            <section>
-                <h3>Responsibility</h3>
-                <p>
-                    My time tutoring has also instilled a sense of responsibility and proactivity in me. This was because I was not micro-managed and was trusted to run myself, my tutees, and my job responsibilities/sessions on my own. This included me:
-                <ul>
-                    <li>Creating my own schedule/hours </li>
-                    <li>Reporting/creating my own time sheets</li>
-                    <li>Seeking out and completing supplemental training on my own</li>
-                    <li>Abiding by the institutions rules and regulations</li>
-                    <li>Conducting myslef appropriately to the standards of the instituiton and its handbook</li>
-                    <li>Addressing my own problems and reach out to the proper channels when necessary.</li>
-                    <li>Participating in weekly meetings</li>
-                </ul>
-                This has required me to be diligent in maintaining my work/life balance, keeping myself accountable, and keeping myself disciplined. Ultimately, I find it is safe to say working for FIU has made me a more efficient and responsible person.
-                </p>
-            </section>
             <div class="button_container">
                     <button class="button"> <a href="#contact"><b>Contact me!
                     </b></a></button>
@@ -450,7 +364,7 @@
 
 
         <!---------contact--------->
-        <section class=" tutoring_contact_container content" id="contact">
+        <section class=" tutoring_contact_container content fade_in" id="contact">
             <header>
                 <h2>Contact me!</h2>
             </header>
