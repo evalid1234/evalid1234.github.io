@@ -56,15 +56,20 @@ img {
 #home, #tutoring, #contact, #projects{ 
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif ;
-
+    
+}
+.format { 
+  max-width: 1000px !important;
 }
 
-#contact, #tutoring, #projects, #contact { 
+
+
+#contact, #tutoring, #projects { 
   background-color: #1a1a1a;
   color: #F1FAEE;
 }
 
-#contact, #tutoring, #projects, #contact {
+#contact, #tutoring, #projects {
     border-top: .5px solid #fff;
     padding: 1rem 0;
 }
