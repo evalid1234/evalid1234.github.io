@@ -1,6 +1,45 @@
+
 //loader
 document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("#spinner").style.display = "none";
+});
+/* progress bar */
+let menu_toggled = false;
+const MENU_HEIGHT = 56;
+const COLLAPSED_MENU_HEIGHT = 216;
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const progressBarContainer = document.getElementById(
+    "progress-bar-container"
+  );
+  const progress = document.querySelector(".progress");
+  const progressBar = document.querySelector(".progress-bar");
+
+  progressBarContainer.style.top = navbar.offsetHeight + "px";
+
+  window.addEventListener("resize", function () {
+    progressBarContainer.style.top = navbar.offsetHeight + "px";
+  });
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const documentHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / documentHeight) * 100;
+    progressBar.style.width = scrollPercent + "%";
+    progressBar.setAttribute("aria-valuenow", scrollPercent);
+  });
+
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  navbarToggler.addEventListener("click", function () {
+    if (!menu_toggled) {
+      progressBarContainer.style.top = COLLAPSED_MENU_HEIGHT + "px";
+    } else {
+      progressBarContainer.style.top = MENU_HEIGHT + "px";
+    }
+    menu_toggled = !menu_toggled;
+  });
 });
 
 //home fade in
@@ -8,8 +47,6 @@ window.addEventListener("load", function () {
   const home = document.querySelector("#home");
   home.classList.add("show");
 });
-
-
 
 /* fade in */
 const fadeElements = document.querySelectorAll(".fade_in");
@@ -27,21 +64,20 @@ const checkFadeElements = () => {
   });
 };
 
-//check on scroll and scroll 
+//check on scroll and scroll
 window.addEventListener("load", checkFadeElements);
 window.addEventListener("scroll", checkFadeElements);
 
-// slid in 
+// slid in
 const slideElements = document.querySelectorAll(".slide_in");
 
 const checkSlideElements = () => {
-
-  slideElements.forEach((element,index) => {
+  slideElements.forEach((element, index) => {
     const elementPosition = element.getBoundingClientRect().top;
     const screenPosition = window.innerHeight;
 
     if (elementPosition < screenPosition) {
-      element.classList.add(index%2===0?"right":"left");
+      element.classList.add(index % 2 === 0 ? "right" : "left");
     }
   });
 };
@@ -60,9 +96,9 @@ let deleting = false;
 let startAnimation = false;
 
 function type() {
-   if (!startAnimation) {
-     return;
-   }
+  if (!startAnimation) {
+    return;
+  }
 
   if (indexFromListOfWords === texts.length) {
     indexFromListOfWords = 0;
@@ -77,24 +113,22 @@ function type() {
 
   document.querySelector("#typing-text").innerHTML = letter;
 
-  if (letter.length-1 === currentWord.length && !deleting) {
+  if (letter.length - 1 === currentWord.length && !deleting) {
     setTimeout(() => {
       deleting = true;
     }, 500);
   }
 
-  if (letter.length-1 === 0 && deleting) {
+  if (letter.length - 1 === 0 && deleting) {
     deleting = false;
     indexFromListOfWords++;
     index = 0;
   }
 
   setTimeout(type, 100);
-};
+}
 
 // create the observer
-
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -109,31 +143,8 @@ const observer = new IntersectionObserver((entries) => {
 // observe the element
 observer.observe(document.querySelector("#typing-text"));
 
-
 /* FORMS */
-// const inputs = document.querySelectorAll("input, textarea");
 
-// const patterns = {
-//   name: /^[a-zA-Z\s]+$/,
-//   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-//   message: /^[a-zA-Z0-9\s]+$/,
-// };
-
-// function validateInput(input, pattern) {
-//   if (pattern.test(input.value)) {
-//     input.classList.remove("invalid");
-//     input.classList.add("valid");
-//   } else {
-//     input.classList.remove("valid");
-//     input.classList.add("invalid");
-//   }
-// }
-
-// inputs.forEach((input) => {
-//   input.addEventListener("keyup", (e) => {
-//     validateInput(e.target, patterns[e.target.attributes.name.value]);
-//   });
-// });
 const form = document.querySelector("form");
 const feedback = document.querySelector("#feedback");
 

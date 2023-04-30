@@ -145,7 +145,7 @@ img {
 .navbarOffset { 
     display:block;
     width: 100%;
-    height: 54px;
+    height: 61px;
 
 }
 .flexItems {
@@ -304,3 +304,23 @@ border: 2px solid greenyellow;
     display: none;
 }
 
+
+#progress-bar-container {
+  position: fixed;
+  top: 56px; /* height of the navbar */
+  left: 0;
+  right: 0;
+  height: 5px;
+  z-index: 999;
+}
+
+.progress-bar {
+  background-color: #FF6A00 !important;
+}
+
+.nav-item:hover a{ 
+  color: #FF6A00 !important;
+  border: 1px #FF6A00 solid;
+  border-radius: 1rem;
+  padding: .5rem;
+}
