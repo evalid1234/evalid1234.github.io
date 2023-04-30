@@ -1,362 +1,293 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>E.L. School Portfolio </title>
         <link rel="icon" type="image/x-icon" href="/images/fav.ico">
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <script src="https://kit.fontawesome.com/9c050fdc22.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="https://kit.fontawesome.com/9c050fdc22.js" crossorigin="anonymous"></script>
         <script src="/js/main.js" defer></script>
     </head>
+
     <body>
+       
+        <div id="spinner"  role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
        
 
         <!--inner links-->
-        <nav id="navbar" >
-            <ul class="navigation">
-                <li class="hamburger_menu"><i class="fa-solid fa-bars fa-2x"></i></li>
-                <li class="item"><a href="#home">Home</a> </li>
-                <li class="item"><a href="#courses">Courses</a> </li>
-                <li class="item"><a href="#projects">Projects</a></li>
-                <li class="item"><a href="#tutoring">Tutoring</a></li>
-                <li class="item"><a href="#contact">Contact</a> </li>
-            </ul>
-        </nav>
-
+       <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark
+       fixed-top       
+       mb-5">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Ed Dev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#tutoring">Tutoring</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " href="#contact">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+       </nav>
 
         <!---------Introduction --------->
-        <main  class="main_container content" id="home">
+    <main  id="home">
+        <span class="navbarOffset"></span>
+        <header class="text-center" >
+            <h2>Hello, Im Ed! </h2>
+        </header>
+        
 
+        <p class=" container ">
+           I'm a recent graduate with a passion for web and software development. With experience in full-stack development, Git, Python, Java, Node.js, and more, I bring a diverse skillset to the table. As a former tutor and Deans list student, I'm dedicated to my craft and strive to create innovative and effective solutions. Let's collaborate to bring your vision to life.
+        </p>
+        <p class="text-center">
+            <span style="color:#FF6A00"class="animation-text ">&lt; p &gt;</span>
+            <span id="typing-text" 
+            style="color:bisque"class="animation-text ">
+                <
+            </span>
+             <span style="color:#FF6A00" class="animation-text">&lt; /p &gt;</span>
+        </p>
 
-            <header class="fade_in" style="text-align:center;">
-                <h2>About me </h2> 
-            </header>
-            <p class="fade_in">
-                My name is <strong>Eduardo,</strong> and this is my <em><b>school portfolio</b></em>, the purpose of which is to summarize some of my coursework, personal
-                projects as well
-                as what I have learned. I am currently a senior at FIU ( Florida International University ) who is majoring in
-                Computer Science, with a minor in mathematics and a big interest in web based development. I Like working out, learning, and generally just having a good time. I offer tutoring for college related courses and have worked for FIU for some time as a learning assistant. 
-            </p>
-                
-            <div class="animation_container content fade_in">
+        <!-- <div class="text-center mt-3">
+            <p>Web Dev | Tutoring | SWE </p>
+        </div> -->
+        <!-- make into a circle icons -->
+        <div class="flexItems mt-3">
+            
+           <a href="#tutoring"> 
+            <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-solid fa-book-open fa-stack-1x"></i>
+            </span>
+            tutoring 
+            </a>
 
-                <!-- <div class="animation_divLeft content">
-                    <p class="p_container"> <i class="arrow left"></i></p>
-                    <p class="p_container "><i class="arrow right"></i></p>
-                </div> -->
+            <a href="#projects"> 
+            <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-solid fa-briefcase fa-stack-1x"></i>
+            </span>
+            projects
+            </a>
 
-                <!-- <div class="animation_message content">
-                    <p>Services</p>
-                </div> -->
+             <a href="#contact"> 
+            <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-solid fa-envelope fa-stack-1x"></i>
+            </span>
+            contact me 
+            </a>           
 
-                <!-- <div class="animation_divRight content">
-                    <p class="p_container"> <i class="arrow left"></i></p>
-                    <p class="p_container"> <i class="arrow slash"></i></p>
-                    <p class="p_container"><i class="arrow right"></i></p>
-                    <header style="text-align:center;">
-                </div>
-            </div> -->
+            </div>
 
-                    <!---------about me --------->
-        <article   class="content" id="about">
-    
+            
+        
+    </main>
+        
         <!-- tutoring -->
-            <div class="flex_container ">
-                <section class="fade_in">
+        <article  id="tutoring" class="fade_in" >
+            <span class="navbarOffset"></span>
+                <section class="container fade_in">
                     <header>
                         <div ><i class="fa-solid fa-chalkboard-user fa-6x"></i></div>
-                        <h3>Tutoring</h3>
+                        <h3 
+                         
+                         class="text-center">Tutoring </h3>
                     </header>
                     
-                    <p style="text-align: left;">
-                        I was a tutor who has worked for two FIU resources: FIU STARS and FIU ASI. I tutored
-                        Data Structures and Algorithms,
-                        Discrete Math, Systems Programming, and Programming 1&2.
-                        <a href="#tutoring">Read about my experiences</a></p>
+                    <p >
+                       Looking for a tutor who has the experience and knowledge to help you succeed? Look no further ! I have a proven track record of success at two FIU resources: FIU STARS and FIU ASI, tutoring the following courses:
                         
-                </section>
-
-                <!--projects-->
-                <section class="fade_in">
-                    <header>
-                        <div><i class="fa-solid fa-folder-open fa-6x"></i></div>
-                        <h3>Projects</h3>
-                    </header>
-                    <p style="text-align: left;">
-                        In my time at FIU I have had to make a variety of projects as well as some of my own. Some pretty rough around the
-                        edges but that was part of my learning process. This list will be updated soon as I 
-                        am transfering old projects:
-                        <a href="#projects"> See some of my projects here</a>
+                         
                     </p>
-                </section>
+                    <div class="container">
 
-                <!--coursework-->
-                <section class="fade_in"> 
-                    <header>
-                        <div >
-                            <i class="fa-solid fa-book fa-6x"></i>
+                    <div class="row">
+                    <div class="text-start col-12 card customCard slide_in   mb-2" >
+                        <div class="card-body">
+                        <p class="card-text">
+                            <ol>
+                            <li> Intro to Programming</li>
+                            <li> Programming 1</li>
+                            <li> Programming 2</li>
+                            <li> Systems Programming</li>
+                            <li> Data Structures and Algorithms</li>
+
+
+
+                        </ol></p>
                         </div>
-                        <h3>Coursework</h3>    
-                    </header>
-
-                    <p style="text-align: left;">
-                        Being in FIU I have also spent plenty of time learning industry-relevant skills and technologies. I currently sport a 3.7 GPA and have made the Dean's List on multiple occasions:
-                        <a href="#courses"> See some of my completed courses here</a>
-                    </p>
-                </section>
-                <div class="button_container">
-                    <button class="button"> <a href="#courses"><b>Courses I've taken
-                    </b></a></button>
-                </div>
-            </div>
-    
-        </article>
-
-        </main>
-
-
-
-        <!---------courses--------->
-        <article   class="content" id="courses">
-            <header>
-                <h2>Courses</h2>
-                <p>This list is not exhaustive, but it includes some fun classes</p><br>
-            </header>
-            <!--ds-->
-            <div class="flex_container">
-                <section >
-                    <header>
-                        <img class="fade_in" src="/images/pic01.jpg" width="300" height="300" alt="course photo">
-                        
-                    </header>
-                    <div class="fade_in">
-                        <h3>Data Structures & Algos</h3>
-                        <h4>Grade:  'A' </h4>
-                    </div> 
-                </section>
-
-                <!--systems-->
-                <section>
-                     <div class="fade_in">
-                        <h3>Systems Programming</h3>
-                        <h4>Grade:  'A' </h4>
-                    </div> 
-                    <div>
-                        <img class="fade_in" src="/images/pic02.jpg" width="300" height="300"  alt="course photo">
                     </div>
-                   
-                </section>
-                
-                <!--operating sys-->
-                <section>
-                    <header>
-                        <img  class="fade_in" src="/images/pic03.jpg" width="300" height="300" alt="course photo">
-                        
-                    </header>
-                    <div class="fade_in">
-                        <h3>Operating Systems</h3>
-                        <h4>Grade:  'A' </h4>
-                         </div>  
-                </section>
-                
-                <!--software engineering-->
-                <section> 
-                    <div class="fade_in">
-                        <h3>Software Engineering</h3>
-                            <h4>Grade:  'A' </h4>
-                         </div>
-                        <div>
-                            <img class="fade_in" src="/images/pic04.jpg" width="300" height="300"  alt="course photo">
-                        </div>
-                        
-                </section>
-
-                <!--software testing-->
-                <section>
-                    <header >
-                        <img class="fade_in" src="/images/pic05.jpg" width="300" height="300" alt="course photo">
-                        
-                    </header>
-                    <div class="fade_in">
-                        <h3>Software Testing</h3>
-                        <h4>Grade:  'A' </h4>
                     </div>
-                </section>
+                    <h5>Services offered in the following formats:</h5>
 
-                <!--principles of languages-->
-                <section>
-                        <div class="fade_in">
-                            <h3>Principles of Programming Languages</h3>
-                            <h4>Grade:  'A' </h4>
+                    <div class="row">
+                    <div class="text-start col-8 card customCard slide_in   mb-2" >
+                        <div class="card-body">
+                        <h5 class=" card-title">Online</h5>
+                        <i class="fa-solid fa-wifi w-100" > online </i>
+                        <p class="card-text"><ul>
+                            <li> Zoom</li>
+                            <li> Discord</li>
+                            <li> Flexible with other mediums</li>
+                        </ul></p>
                         </div>
-                        <div >
-                            <img class="fade_in" src="/images/pic07.jpg" width="300" height="300" alt="course photo">
-                        </div>
-                        
-                </section>
-
-                <!--theory of algos-->
-                <section>
-                    <header>
-                        <img 
-                        class="fade_in"
-                        src="/images/pic08.jpg" width="300" height="300" alt="course photo">
-                    </header>
-                    <div class="fade_in">
-                        <h3>Theory of Algorithms</h3>
-                        <h4>Grade:  'B' </h4>
                     </div>
-                </section>
+                    </div>
 
-                <div class="button_container">
-                    <button class="button"> <a href="#projects"><b>See projects
-                    </b></a></button>
-                </div>
-            </div>
-           
+                    <div class="row  justify-content-end">
+                    <div class="text-end col-8 card customCard slide_in  " >
+                        <div class="card-body ">
+                            <h5 class=" card-title">In person</h5>
+                            <i class="fa-solid fa-user-group w-100"> IN person</i>
+                            <p class="card-text "><i>Depends on location</i></p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    
+                    <div class="text-center mt-4 mb-3">
+                    <a class="button slide_in" href="#contact">Learn More, contact me</a>
+                    </div>
+                 
+                </section>
         </article>
 
         <!---------projects--------->
-        <article   class="content" id="projects">
+    
+        <article  id="projects">
+            <span class="navbarOffset"></span>
             <header>
-                <h2>Personal/Academic Projects</h2>
+                <h2 class="text-center">Personal/Academic Projects</h2>
             </header>
-            <div class="flex_container">
             <!-- sorting project -->
-            <section class="fade_in">
-                <h3>Sorting project</h3>
-                <a href="https://evalid1234.github.io/sorts/"><img src="images/sorting.jpg" height="300" width="900" alt="sorting project" target="_blank"></a>
-                <h4><a href="https://evalid1234.github.io/sorts/" target="_blank">Try me</a></h4>
-                <details>
-                    <summary>Read About me</summary> 
-                    <p>
-                        Sorting animations made in vanilla Javascript, html and css.
-                        <h3>Lessons Learned</h3>
-                        <ul>
-                            <li>How to create animations on canvas and basic principles of animations</li>
-                            <li>Using logic to change animations</li>
-                            <li>Using Javascript to create dynamic and responsive webpages</li>
-                            <li>Solidified css knowledge  with grids and flexboxes</li>
-                        </ul>
-                    </p>
-                </details>
+            <section class=" container fade_in ">
+                <div class="row  slide_in mt-2">
+                    <div class="card customCard col-sm-10 col-lg-8">
+                        <h3 class="card-header">Sorting project
+                        </h3>
+                    <div class="card-body text-center">
+                        <a href="https://evalid1234.github.io/sorts/"><img class="img-fluid "src="images/sorting.jpg"  alt="sorting project" target="_blank" />
+                        </a>
+                    </div>
+                    <details class="mt-3 mb-3">
+                        <summary>Read About me</summary> 
+                        <p>
+                            Sorting animations made in vanilla Javascript, html and css.
+                            <h3>Lessons Learned</h3>
+                            <ul>
+                                <li>How to create animations on canvas and basic principles of animations</li>
+                                <li>Using logic to change animations</li>
+                                <li>Using Javascript to create dynamic and responsive webpages</li>
+                                <li>Solidified css knowledge  with grids and flexboxes</li>
+                            </ul>
+                        </p>
+                    </details>
+                    </div>
+                </div>
             </section>
-            <!-- stock project -->
-            <section class="fade_in">
-                <h3>Stock project (in progess)</h3>
-                <a href="https://floating-brushlands-07639.herokuapp.com/" ><img src="images/stock_site.jpg" height="300" width="900" alt="stock website project" target="_blank"></a>
-                <h4><a href="https://floating-brushlands-07639.herokuapp.com/" target="_blank">Try me</a></h4>
-                <details>
-                    <summary>Read About me</summary> 
-                    <p>
-                        This project is in progress, namely no effective mobile menu is yet supported as of 9/10/22. This project
-                        is a minimal website that displays articles using apis as well as pulls from another api to show users 
-                        information about the chosen company. As of now, only basic styling and features have been added, but more is sure to come. 
-                        <h3>Lessons Learned So Far</h3>
-                        <ul>
-                            <li>Using python for web applications</li>
-                            <li>Using flask framework for web applications</li>
-                            <li>Using and creating asynchronous code</li>
-                            <li>Calling apis and using their content</li>
-                            <li>Creating complex sites and user content</li>
-                            <li>Initializing and using dataBases</li>
-                            <li>Utilizing basic sql in basic web applications</li>
-                            <li>Creating cahces and deploying to remote server</li>
-                            <li>Collaboration with others and using developer tools</li>
-                        </ul>
-                    </p>
-                </details>
-            </section>
+            <div class="text-center mt-4">
+            <a class="button slide_in" href="#contact">Learn More, contact me</a>
+            </div>
             
-            <div class="button_container">
-                    <button class="button"> <a href="#tutoring"><b>Read about my Tutoring 
-                    </b></a></button>
-            </div>
-            </div>
-        </article>
-
-        <!---------tutoring section--------->
-        <article   class="tutoring_contact_container content fade_in" id="tutoring">
-            <header>
-                <h2>Tutoring Experience and Skills Learned</h2>
-            </header>
-
-            <section>
-                
-                <p>
-                    As a tutor, I have learned to communicate and learn alongside many different personalities and learning styles. I was a tutor for two FIU tutoring services and I have learned/ relearned software and algorithm related question countless times. 
-                    I take pride in my work, and I worked tirelessly to help my tutees get th results they wanted. If you would like a tutor in any Computer Science courses, or want to know more about me, I have tutored:
-                    <ul>
-                        <li>
-                            Data Structures and algorithm
-                        </li>
-                        <li>
-                            Programming 1 
-                        </li>
-                        <li>Programming 2</li>
-                        <li>
-                            Discrete math
-                        </li>
-                        <li>
-                            Systems programming
-                        </li>
-                    </ul>
-            </section>
-
-            <div class="button_container">
-                    <button class="button"> <a href="#contact"><b>Contact me!
-                    </b></a></button>
-            </div>
         </article>
 
 
         <!---------contact--------->
-        <section class=" tutoring_contact_container content fade_in" id="contact">
-            <header>
+        <article id="contact">
+        <section class=" flexContainer container  fade_in slide_in">
+            <span class="navbarOffset"></span>
+            <header class="text-center">
                 <h2>Contact me!</h2>
             </header>
+            <!-- maxlength pattern  -->
+            <form class="mt-3" action="https://formsubmit.co/da223355d26640c943002c401f3b0775" method="POST">
 
-            <form action="https://formsubmit.co/da223355d26640c943002c401f3b0775" method="POST">
-                <input type="hidden" name="_autoresponse"
-                    value="Hello, I normally respond within 1-2 business days. So please allow me a bit of time to respond. Thanks for contacting me!">
-                <input type="hidden" name="_next" value="http://evalid1234.github.io/thanks.html">
-                <div class="small_input">
-                    <label for="name">Enter name:</label><br>
-                    <input  type="text" name="name" id="name" placeholder="Name" required /><br>
-                </div>
-            
-                <div class="small_input">
-                    <label for="email">Email: example@gmail.com</label><br>
-                    <input type="email" name="email" id="email" placeholder="Email" required inputmode="email"/><br>
-                </div>
+  <input type="hidden" name="_autoresponse" value="Hello, I normally respond within 1-2 business days. So please allow me a bit of time to respond. Thanks for contacting me!">
+  <input type="hidden" name="_next" value="http://evalid1234.github.io/thanks.html">
+  <div id="feedback"></div>
+  
+  <div class="row">
+    <div class="col-5">
+      <label for="name">Enter name:</label>
+      <input type="text" name="name" id="name" placeholder="Name" title="Enter your name. No numbers or special characters" maxlength="50" pattern="[a-zA-Z\s]+">
+    </div>
 
-                <label for="subject">Email Header:</label><br>
-                <input class="large_input header" type="text" name="subject" id="subject" placeholder="Subject" required /><br>
-                
-                <label for="message">Enter message:</label><br>
-                <textarea class="large_input" name="message" id="message" placeholder="Message" required></textarea><br>
-                <input class="button" type="submit" 
-                value="Send Message" spellcheck="true"><br>
-            </form>
+    <div class="col-7">
+      <label for="subject">Email Header:</label><br>
+      <input type="text" name="subject" id="subject" title="Enter an email heading" placeholder="Subject" required>
+    </div>
+  </div>
 
-            <footer class="content" id="footer">
-                <header>
-                    <h3>Find me on ...</h3>
-                </header>
-                <ul class="social">
-                
-                    <li id="linkedIn"><a href="https://www.linkedin.com/in/eduardo-lagunas/" >
-                               <i class="fa fa-linkedin-square" style="font-size:36px"></i></a></li>
-                    <li><a href="https://github.com/evalid1234"><i class="fa fa-github" style="font-size:36px"></i></a></li>
-                </ul>
-                <p>&copy; @evalid1234 2022.</p>
+  <div class="row">
+    <div class="col-12">
+      <label for="email">Email: example@gmail.com</label><br>
+      <input type="email" name="email" id="email" title="Enter an email address" placeholder="Email" required inputmode="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+        <label for="message">Enter message:</label>
+
+        <textarea name="message" id="message" placeholder="Message (100 Chars max)" required rows="5" cols="20" maxlength="100" pattern="[a-zA-Z0-9\s,._]*">
+
+        </textarea>
+        <button class="mt-4 w-50 button" type="submit" spellcheck="true">Send</button>
+    </div>
+  </div>
+  
+</form>
+
+            </section>
+             <footer class="flexContainer slide_in" id="footer">
+            <div class="flexItems">
+           <a href="https://github.com/evalid1234"> 
+            <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-solid fa-github fa-stack-1x"></i>
+            </span>
+            Github 
+            </a>
+            |
+            <a href="https://www.linkedin.com/in/eduardo-lagunas/"> 
+            <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-solid fa-fa-linkedin-square fa-stack-1x"></i>
+            </span>
+            Linkedin
+            </a>
+                       
+            </div>
+                <p>&copy;  @evalid1234 | 2022.</p>
             </footer>
-        </section>
+            </article>
 
+           
     </body>
 
 </html>
