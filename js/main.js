@@ -35,7 +35,6 @@ window.addEventListener("scroll", checkFadeElements);
 const slideElements = document.querySelectorAll(".slide_in");
 
 const checkSlideElements = () => {
-        console.log("sliding in");
 
   slideElements.forEach((element,index) => {
     const elementPosition = element.getBoundingClientRect().top;
@@ -65,7 +64,6 @@ function type() {
      return;
    }
 
-  console.log('running')
   if (indexFromListOfWords === texts.length) {
     indexFromListOfWords = 0;
   }
