@@ -324,3 +324,13 @@ border: 2px solid greenyellow;
   border-radius: 1rem;
   padding: .5rem;
 }
+
+
+/* ICONS  */
+.icon { 
+  background-color:#FF6A00 ;
+}
+.icon:hover{ 
+  background-color: #f3f3f3;
+  color:#FF6A00 !important;
+}
