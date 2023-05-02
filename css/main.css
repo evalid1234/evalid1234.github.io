@@ -37,6 +37,13 @@ img {
 #projects .card.customCard {
     background-color: #6ab7ff;
     color: #f3f3f3 !important;
+    transition: 3s linear;
+}
+
+#projects .card.customCard:hover img {
+    transform: scale(1.5,1.5);
+
+    justify-self: center;
 }
 #projects .button,
 #contact .button{
