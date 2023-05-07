@@ -68,18 +68,77 @@ const checkFadeElements = () => {
 window.addEventListener("load", checkFadeElements);
 window.addEventListener("scroll", checkFadeElements);
 
-// slid in
-const slideElements = document.querySelectorAll(".slide_in");
+// blog book animation
 
+
+function typeBlogBookText(currentText, element, index) {
+  return new Promise((resolve) => {
+    let currentTextLetter = 0;
+    
+    if (index >= currentText.length) {
+      element.innerHTML = currentText;
+      resolve();
+      return;
+    }
+    currentTextLetter = currentText.slice(0, ++index) + " " + "🖉";
+       
+    element.innerHTML = currentTextLetter;
+    setTimeout(() => {
+      typeBlogBookText(currentText, element, index).then(resolve);
+    }, 50);
+  });
+}
+  
+
+//const pre_book = document.querySelector("#pre_book");
+// pre_book.addEventListener("animationend", async () => {
+//   pre_book.classList.add('invisible');
+//   const book = document.querySelector('.book-container');
+//   book.addEventListener("animationend", async () => { 
+//     console.log("fired")
+//     const bookLinkText = "Checkout my blog!";
+//     const bookInnerText =
+//       "In an effort to document my studies and provide a reference for others/myself, I created a blog.";
+//     const text = document.querySelector(".page-text");
+//     const link = document.querySelector(".page-link");
+//     await typeBlogBookText(bookInnerText, text, 0);
+//     await typeBlogBookText(bookLinkText, link, 0);
+//   })
+//   book.classList.add("open");
+//   book.classList.remove("invisible");
+// });
+
+//slide in
+const slideElements = document.querySelectorAll(".slide_in");
 const checkSlideElements = () => {
   slideElements.forEach((element, index) => {
-    const elementPosition = element.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight;
-
-    if (elementPosition < screenPosition) {
-      element.classList.add(index % 2 === 0 ? "right" : "left");
+    if (element.id == "pre_book") { 
+      element.addEventListener("animationend", async () => {
+        element.classList.add("invisible");
+        const book = document.querySelector(".book-container");
+        book.addEventListener("animationend", async () => {
+          const bookLinkText = "Checkout my blog!";
+          const bookInnerText =
+            "In an effort to document my studies and provide a reference for others/myself, I created a blog.";
+          const text = document.querySelector(".page-text");
+          const link = document.querySelector(".page-link");
+          await typeBlogBookText(bookInnerText, text, 0);
+          await typeBlogBookText(bookLinkText, link, 0);
+        });
+        book.classList.add("open");
+        book.classList.remove("invisible");
+      });
     }
+      const elementPosition = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight;
+    
+      if (elementPosition < screenPosition) {
+        element.classList.add(index % 2 === 0 ? "right" : "left");
+      }
+    
+    
   });
+
 };
 
 // check on scroll and resize
@@ -95,7 +154,7 @@ let letter = "";
 let deleting = false;
 let startAnimation = false;
 
-function type() {
+function typeHomeText() {
   if (!startAnimation) {
     return;
   }
@@ -125,7 +184,7 @@ function type() {
     index = 0;
   }
 
-  setTimeout(type, 100);
+  setTimeout(typeHomeText, 100);
 }
 
 // create the observer
@@ -133,7 +192,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       startAnimation = true;
-      type();
+      typeHomeText();
     } else {
       startAnimation = false;
     }
