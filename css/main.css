@@ -113,10 +113,20 @@ img{
   opacity: 80%;
   transition: transform 0.3s ease;
 }
-#home .flexItems a:hover {
+.homeIconContainer {
+  opacity: 80%;
+  transition: transform 0.3s ease;
+}
+.homeIconContainer:hover p,
+.homeIconContainer:hover a 
+{
   transform: translateY(-10px);
   opacity: 100%;
 }
+/* #home .flexItems a:hover {
+  transform: translateY(-10px);
+  opacity: 100%;
+} */
 
 #home.show {
   opacity: 1;
@@ -269,6 +279,7 @@ textarea {
   border-radius: .5rem;
   margin-bottom: 1rem;
   background-color: #fff;
+  color:#000;
 }
 
 label:hover {
@@ -353,7 +364,9 @@ textarea {
 }
 
 /* -------------ICONS--------- */
-
+.homeIconContainer p{
+  color:#ff6a00;
+}
 .icon {
   background-color: #ff6a00;
   color: #f1faee !important;
