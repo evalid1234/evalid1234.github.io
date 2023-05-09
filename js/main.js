@@ -87,6 +87,11 @@ function typeBlogBookText(currentText, element, index) {
   });
 }
 // blog stuff
+
+const blogContainer = document.querySelector(".mobile-layout"); 
+blogContainer.addEventListener("click", () => {
+  blogContainer.classList.toggle("active");
+});
 const blogBody = document.querySelector("#blog-container");
 const bookCover = document.querySelector(".book-cover");
 let animationMovingUp = true;

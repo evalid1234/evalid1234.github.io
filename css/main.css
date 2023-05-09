@@ -533,15 +533,18 @@ section.container.blog {
   transform: translateY(-15px) translateX(0px) translateZ(15px) rotateX(104deg);
 }
 
-.mobile-layout:hover .book-cover {
-  transform: rotateX(75deg) translateZ(3px) scale(0.75);
+.mobile-layout:hover .book-cover,
+.mobile-layout:active .book-cover {
+  transform: rotateX(75deg) translateZ(3px) scale(0);
 }
 
-.mobile-layout:hover .book-cover + .preface {
+.mobile-layout:hover .book-cover + .preface,
+.mobile-layout:active .book-cover  + .preface{
   transform: translateY(-302px);
 }
 
-.mobile-layout::hover .book-cover + .preface .icon {
+.mobile-layout::hover .book-cover + .preface .icon,
+.mobile-layout::active .book-cover + .preface .icon {
   transform: rotateX(180deg);
 }
 
@@ -575,12 +578,9 @@ section.container.blog {
 }
 
 .mobile-layout .preface .body {
-        font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
 }
 .mobile-layout .preface .body p:first-child {
   margin-bottom:15px;
-}
-.page-link { 
-  border: 1px solid green;
 }
