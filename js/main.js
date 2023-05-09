@@ -1,4 +1,3 @@
-
 //loader
 document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("#spinner").style.display = "none";
@@ -70,75 +69,60 @@ window.addEventListener("scroll", checkFadeElements);
 
 // blog book animation
 
-
 function typeBlogBookText(currentText, element, index) {
   return new Promise((resolve) => {
     let currentTextLetter = 0;
-    
+
     if (index >= currentText.length) {
       element.innerHTML = currentText;
       resolve();
       return;
     }
     currentTextLetter = currentText.slice(0, ++index) + " " + "🖉";
-       
+
     element.innerHTML = currentTextLetter;
     setTimeout(() => {
       typeBlogBookText(currentText, element, index).then(resolve);
     }, 50);
   });
 }
-  
+// blog stuff
+const blogBody = document.querySelector("#blog-container");
+const bookCover = document.querySelector(".book-cover");
+let animationMovingUp = true;
 
-//const pre_book = document.querySelector("#pre_book");
-// pre_book.addEventListener("animationend", async () => {
-//   pre_book.classList.add('invisible');
-//   const book = document.querySelector('.book-container');
-//   book.addEventListener("animationend", async () => { 
-//     console.log("fired")
-//     const bookLinkText = "Checkout my blog!";
-//     const bookInnerText =
-//       "In an effort to document my studies and provide a reference for others/myself, I created a blog.";
-//     const text = document.querySelector(".page-text");
-//     const link = document.querySelector(".page-link");
-//     await typeBlogBookText(bookInnerText, text, 0);
-//     await typeBlogBookText(bookLinkText, link, 0);
-//   })
-//   book.classList.add("open");
-//   book.classList.remove("invisible");
-// });
+blogBody.addEventListener("transitionend", async (event) => {
+  if (event.target !== bookCover) {
+    return;
+  }
+
+  console.log(animationMovingUp);
+
+  if (!animationMovingUp) {
+    return;
+  }
+
+  animationMovingUp = false;
+  const bookLinkText = "Come check out my current blog!";
+  const bookInnerText = "I have many resources that I still need to add to my blog. However, this is a long process and my blog is new, so it is fairly empty. I hope you can still take a look";
+  const text = document.querySelector(".page-text");
+  const link = document.querySelector(".page-link");
+
+  await typeBlogBookText(bookInnerText, text, 0);
+  await typeBlogBookText(bookLinkText, link, 0);
+});
 
 //slide in
 const slideElements = document.querySelectorAll(".slide_in");
 const checkSlideElements = () => {
   slideElements.forEach((element, index) => {
-    if (element.id == "pre_book") { 
-      element.addEventListener("animationend", async () => {
-        element.classList.add("invisible");
-        const book = document.querySelector(".book-container");
-        book.addEventListener("animationend", async () => {
-          const bookLinkText = "Checkout my blog!";
-          const bookInnerText =
-            "In an effort to document my studies and provide a reference for others/myself, I created a blog.";
-          const text = document.querySelector(".page-text");
-          const link = document.querySelector(".page-link");
-          await typeBlogBookText(bookInnerText, text, 0);
-          await typeBlogBookText(bookLinkText, link, 0);
-        });
-        book.classList.add("open");
-        book.classList.remove("invisible");
-      });
-    }
-      const elementPosition = element.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight;
-    
-      if (elementPosition < screenPosition) {
-        element.classList.add(index % 2 === 0 ? "right" : "left");
-      }
-    
-    
-  });
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
 
+    if (elementPosition < screenPosition) {
+      element.classList.add(index % 2 === 0 ? "right" : "left");
+    }
+  });
 };
 
 // check on scroll and resize
