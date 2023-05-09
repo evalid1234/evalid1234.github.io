@@ -533,19 +533,32 @@ section.container.blog {
   transform: translateY(-15px) translateX(0px) translateZ(15px) rotateX(104deg);
 }
 
-.mobile-layout:hover .book-cover,
-.mobile-layout:active .book-cover {
+@media(hover:hover){
+.mobile-layout:hover .book-cover {
   transform: rotateX(75deg) translateZ(3px) scale(0);
 }
 
-.mobile-layout:hover .book-cover + .preface,
-.mobile-layout:active .book-cover  + .preface{
+.mobile-layout:hover .book-cover + .preface{
   transform: translateY(-302px);
 }
 
-.mobile-layout::hover .book-cover + .preface .icon,
-.mobile-layout::active .book-cover + .preface .icon {
+.mobile-layout::hover .book-cover + .preface .icon {
   transform: rotateX(180deg);
+}
+}
+
+@media (hover: none){
+  .mobile-layout.clicked .book-cover {
+  transform: rotateX(75deg) translateZ(3px) scale(0);
+}
+
+.mobile-layout.clicked .book-cover  + .preface{
+  transform: translateY(-302px);
+}
+
+.mobile-layout.clicked .book-cover + .preface .icon {
+  transform: rotateX(180deg);
+}
 }
 
 .mobile-layout .preface {

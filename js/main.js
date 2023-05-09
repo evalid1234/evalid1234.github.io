@@ -90,7 +90,7 @@ function typeBlogBookText(currentText, element, index) {
 
 const blogContainer = document.querySelector(".mobile-layout"); 
 blogContainer.addEventListener("click", () => {
-  blogContainer.classList.toggle("active");
+  blogContainer.classList.toggle("clicked");
 });
 const blogBody = document.querySelector("#blog-container");
 const bookCover = document.querySelector(".book-cover");
@@ -100,9 +100,6 @@ blogBody.addEventListener("transitionend", async (event) => {
   if (event.target !== bookCover) {
     return;
   }
-
-  console.log(animationMovingUp);
-
   if (!animationMovingUp) {
     return;
   }
