@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener("scroll", function () {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const documentHeight =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
@@ -67,52 +67,7 @@ const checkFadeElements = () => {
 window.addEventListener("load", checkFadeElements);
 window.addEventListener("scroll", checkFadeElements);
 
-// blog book animation
 
-function typeBlogBookText(currentText, element, index) {
-  return new Promise((resolve) => {
-    let currentTextLetter = 0;
-
-    if (index >= currentText.length) {
-      element.innerHTML = currentText;
-      resolve();
-      return;
-    }
-    currentTextLetter = currentText.slice(0, ++index) + " " + "🖉";
-
-    element.innerHTML = currentTextLetter;
-    setTimeout(() => {
-      typeBlogBookText(currentText, element, index).then(resolve);
-    }, 50);
-  });
-}
-// blog stuff
-
-const blogContainer = document.querySelector(".mobile-layout"); 
-blogContainer.addEventListener("click", () => {
-  blogContainer.classList.toggle("clicked");
-});
-const blogBody = document.querySelector("#blog-container");
-const bookCover = document.querySelector(".book-cover");
-let animationMovingUp = true;
-
-blogBody.addEventListener("transitionend", async (event) => {
-  if (event.target !== bookCover) {
-    return;
-  }
-  if (!animationMovingUp) {
-    return;
-  }
-
-  animationMovingUp = false;
-  const bookLinkText = "Come check out my current blog!";
-  const bookInnerText = "I have many resources that I still need to add to my blog. However, this is a long process and my blog is new, so it is fairly empty. I hope you can still take a look";
-  const text = document.querySelector(".page-text");
-  const link = document.querySelector(".page-link");
-
-  await typeBlogBookText(bookInnerText, text, 0);
-  await typeBlogBookText(bookLinkText, link, 0);
-});
 
 //slide in
 const slideElements = document.querySelectorAll(".slide_in");
