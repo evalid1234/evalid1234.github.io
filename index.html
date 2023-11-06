@@ -33,10 +33,13 @@
   </head>
 
   <body>
-    <div id="spinner" role="status"></div>
+    <div class="loading_group">
+      <h1 aria-hidden="true" id="spinner_message">Loading...</h1>
+      <div aria-ignore="true" id="spinner" role="status"></div>
+    </div>
     <!---------Home Page --------->
     <main id="home">
-      <nav role="navigation" class="navbar_items">
+      <nav role="navigation" class="navbar_items mt-2">
         <a class="icon_parent text-center" href="#projects" title="Projects">
           <i class="fa-solid fa-briefcase fa-xl icon" title="Project page">
             ICO</i
@@ -66,26 +69,26 @@
       </nav>
       <section class="home_splash_body slide_in">
         <!-- <span class="navbarOffset"></span> -->
-        <div aria-hidden="true" class="text-center text_animation">
-          <h1 aria-hidden="true" role="title">
+        <div aria-hidden="true" class="text-center m-5 fs-3">
+          <div aria-hidden="true" role="title">
             <span class="text-center">
               <code style="color: #55aad9" class="">&lt;p&gt; </code>
               <code id="typing-text" style="color: #ff6a00"> </code>
 
               <code style="color: #55aad9">&lt;/p&gt;</code>
             </span>
-          </h1>
+          </div>
         </div>
         <!-- TODO make into an about page! -->
-        <div class="splash_text_layout  ">
+        <div class="splash_text_layout">
           <header class="splash_title">
             Eduardo <em class="low_emphasis">[ed-war-doh]</em>
             <span>n.</span>
           </header>
           <p class="splash_text mt-2 pt-1">
             <span>
-              <em>1.</em> A passionate young <b>developer</b> looking to help you with
-              your next project.
+              <em>1.</em> A passionate young <b>developer</b> looking to help
+              you with your next project.
             </span>
             <br />
             <span class="mt-1">
@@ -94,13 +97,13 @@
             </span>
           </p>
         </div>
-        <p class="text-center">
+        <p class="text-center m-5">
           <button class="button">Projects</button>
           <a class="cta_link" href=""> About me &rarr;</a>
         </p>
         <!-- Skills -->
-        <ul class="skills p-3 mt-3">
-          <div class="skills_body p-3">
+        <ul class="skills m-5">
+          <div class="skills_body">
             <li class="tooltip_trigger">
               HTML
               <span class="tooltiptext expert">Expert</span>
@@ -130,8 +133,8 @@
 
         <!-- Splash page Action icons -->
       </section>
-      <footer class="slide_in" id="footer">
-        <div class="navbar_items mt-5">
+      <footer class="slide_in mb-3" id="footer">
+        <div class="navbar_items">
           <a
             class="icon_parent"
             href="https://github.com/evalid1234"
@@ -153,14 +156,17 @@
         </p>
       </footer>
     </main>
-    <!---------projects--------->
-    <article id="projects" class="p-4">
+    <!-- -------projects------- -->
+  </body>
+</html>
+
+<!-- <article id="projects" class="p-4">
       <span class="navbarOffset"></span>
       <header>
         <h2 class="text-center">Personal/Academic Projects</h2>
       </header>
-      <!-- sorting project -->
-      <section class="container format fade_in">
+       sorting project -->
+<!-- <section class="container format fade_in">
         <div class="row slide_in mt-4">
           <div class="card customCard col-sm-7 col-md-6">
             <h4 class="card-header">Sorting Project</h4>
@@ -192,9 +198,9 @@
             </details>
           </div>
         </div>
-      </section>
-      <!-- To do list project -->
-      <section class="container format fade_in">
+      </section> -->
+<!-- To do list project -->
+<!-- <section class="container format fade_in">
         <div class="row justify-content-end slide_in mt-4">
           <div class="card customCard col-sm-7 col-md-6">
             <h4 class="card-header">Checked In</h4>
@@ -243,15 +249,15 @@
       <div class="text-center mt-4">
         <a class="button slide_in p-3 w-50" href="#contact">Get in touch!</a>
       </div>
-    </article>
-    <!---------contact--------->
-    <article id="contact">
+    </article> -->
+<!---------contact--------->
+<!-- <article id="contact">
       <span class="navbarOffset"></span>
       <section
         class="container p-4 d-flex justify-content-center mb-5 mt-5 fade_in slide_in"
-      >
-        <!-- maxlength pattern  -->
-        <div
+      > -->
+<!-- maxlength pattern  -->
+<!-- <div
           class="messageContainer row d-flex flex-sm-column-reverse flex-md-row justify-content-center"
         >
           <form
@@ -342,19 +348,6 @@
             </div>
           </form>
           <div class="messageImage col-sm-12 col-md-5"></div>
-        </div>
-      </section>
-    </article>
-  </body>
-</html>
-
-<!-- <a
-          href="https://www.flaticon.com/free-icons/spaceship"
-          title="spaceship icons"
-          >Spaceship icons created by DinosoftLabs - Flaticon</a
-        >
-        <a
-          href="https://www.vecteezy.com/vector-art/10806689-cute-cartoon-astronaut-riding-a-rocket-vector-illustration"
-          title="astronaught icon"
-          >Astro icon - vecteezy</a
-        > -->
+        </div> -->
+<!-- </section> -->
+<!-- </article> -->

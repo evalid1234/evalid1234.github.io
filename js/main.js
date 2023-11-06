@@ -1,12 +1,13 @@
 //loader
 document.addEventListener("DOMContentLoaded", function (event) {
-  document.querySelector("#spinner").style.display = "none";
+  document.querySelector(".loading_group").style.display = "none";
+  
 });
 
 //home fade in
 window.addEventListener("load", function () {
   const home = document.querySelector("#home");
-  home.classList.add("show");
+   home.classList.add("show");
 });
 
 /* fade in */
