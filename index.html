@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>E.L. School Portfolio</title>
+    <title>Home | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="./images/fav.ico" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -24,11 +24,20 @@
       defer
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
+    <!-- <script
       defer
       src="https://kit.fontawesome.com/9c050fdc22.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script src="./js/main.js" defer></script>
   </head>
 
@@ -39,37 +48,56 @@
     </div>
     <!---------Home Page --------->
     <main id="home">
-      <nav role="navigation" class="navbar_items mt-2">
-        <a class="icon_parent text-center" href="#projects" title="Projects">
-          <i class="fa-solid fa-briefcase fa-xl icon" title="Project page">
-            ICO</i
+      <div class="navbar_container">
+        <img
+          aria-hidden="true"
+          class="logo"
+          height="50px"
+          width="200px"
+          src="images/logo.svg"
+          alt="image"
+        />
+
+        <div class="toggle_menu">
+          <i class="fa-regular fa-bars fa-lg icon"> </i>
+        </div>
+        <!-- <div>as;dfkljas;dlkf</div> -->
+        <nav role="navigation" class="navbar_items">
+          <!-- make this invisible then use an after to take up space-->
+          <a class="icon_parent text-center" href="#projects" title="Projects">
+            <i class="fa-solid fa-briefcase fa-xl icon" title="Project page">
+            </i>
+          </a>
+
+          <a
+            class="icon_parent text-center"
+            href="https://evalid1234.github.io/Blog/"
+            target="_blank"
+            title="Blog"
           >
-        </a>
+            <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> </i>
+          </a>
+          <a
+            class="icon_parent text-center"
+            href="https://evalid1234.github.io/About/"
+            target="https://evalid1234.github.io/About/"
+            title="About"
+          >
+            <i class="fa-solid fa-blog fa-lg icon" title="About page"> </i>
+          </a>
 
-        <a
-          class="icon_parent text-center"
-          href="https://evalid1234.github.io/Blog/"
-          target="_blank"
-          title="Blog"
-        >
-          <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> ICO</i>
-        </a>
-        <a
-          class="icon_parent text-center"
-          href="https://evalid1234.github.io/About/"
-          target="https://evalid1234.github.io/About/"
-          title="About"
-        >
-          <i class="fa-solid fa-blog fa-lg icon" title="About page"> ICO</i>
-        </a>
-
-        <a class="icon_parent text-center" href="" target="_self" title="Blog">
-          <i class="fa-solid fa-blog fa-lg icon" title="Contact page">ICO</i>
-        </a>
-      </nav>
+          <a
+            class="icon_parent text-center"
+            href=""
+            target="_self"
+            title="Blog"
+          >
+            <i class="fa-solid fa-blog fa-lg icon" title="Contact page"></i>
+          </a>
+        </nav>
+      </div>
       <section class="home_splash_body slide_in">
-        <!-- <span class="navbarOffset"></span> -->
-        <div aria-hidden="true" class="text-center m-5 fs-3">
+        <div aria-hidden="true" class="text-center m-3 fs-3">
           <div aria-hidden="true" role="title">
             <span class="text-center">
               <code style="color: #55aad9" class="">&lt;p&gt; </code>
@@ -80,15 +108,15 @@
           </div>
         </div>
         <!-- TODO make into an about page! -->
-        <div class="splash_text_layout">
+        <div class="splash_text_layout ps-4 pe-3 mt-3 mb-3">
           <header class="splash_title">
-            Eduardo <em class="low_emphasis">[ed-war-doh]</em>
+            <b> Eduardo </b><i class="low_emphasis">[ed-war-doh]</i>
             <span>n.</span>
           </header>
           <p class="splash_text mt-2 pt-1">
             <span>
-              <em>1.</em> A passionate young <b>developer</b> looking to help
-              you with your next project.
+              <em>1.</em> A passionate young <strong>developer</strong> looking
+              to help you with your next project.
             </span>
             <br />
             <span class="mt-1">
@@ -97,12 +125,14 @@
             </span>
           </p>
         </div>
-        <p class="text-center m-5">
+
+        <!-- Call to action  -->
+        <p class="text-center m-3 mb-5">
           <button class="button">Projects</button>
           <a class="cta_link" href=""> About me &rarr;</a>
         </p>
         <!-- Skills -->
-        <ul class="skills m-5">
+        <ul class="skills m-3">
           <div class="skills_body">
             <li class="tooltip_trigger">
               HTML
@@ -133,14 +163,14 @@
 
         <!-- Splash page Action icons -->
       </section>
-      <footer class="slide_in mb-3" id="footer">
+      <footer class="slide_in m-3" id="footer">
         <div class="navbar_items">
           <a
             class="icon_parent"
             href="https://github.com/evalid1234"
             title="My github"
           >
-            <i class="fa-brands fa-github fa-xl icon">ico</i>
+            <i class="fa-brands fa-github fa-xl icon"></i>
           </a>
           <span> | </span>
           <a
@@ -148,7 +178,7 @@
             href="https://www.linkedin.com/in/eduardo-lagunas/"
             title="My linkedin"
           >
-            <i class="fa-brands fa-linkedin fa-xl icon">ico</i>
+            <i class="fa-brands fa-linkedin fa-xl icon"></i>
           </a>
         </div>
         <p>
