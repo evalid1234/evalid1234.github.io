@@ -42,23 +42,36 @@
   </head>
 
   <body>
+    <noscript class="no_script">
+      <h1>Oh no...</h1>
+      <h2>
+        <strong><em>Javascript disabled</em></strong>
+      </h2>
+      <p>
+        Sorry, currently this site uses alot of JS. I will be adding fallback
+        support soon. please enable JS to continue. Or check back later!
+      </p>
+    </noscript>
     <div class="loading_group">
       <h1 aria-hidden="true" id="spinner_message">Loading...</h1>
-      <div aria-ignore="true" id="spinner" role="status"></div>
+
+      <i id="spinner" class="fa-solid fa-spinner fa-spin-pulse"></i>
     </div>
     <!---------Home Page --------->
 
     <main id="home">
       <aside class="sidebar">
-        <nav role="navigation"  > 
+        <nav role="navigation">
+          <h2>Find me</h2>
           <a
             class="icon_parent"
             href="https://github.com/evalid1234"
             title="My github"
           >
-          <span>Github </span>
+            <span>Github </span>
             <i class="fa-brands fa-github fa-xl icon"></i>
           </a>
+
           <a
             class="icon_parent"
             href="https://www.linkedin.com/in/eduardo-lagunas/"
@@ -66,6 +79,24 @@
           >
             <span>Linkedin</span>
             <i class="fa-brands fa-linkedin fa-xl icon"></i>
+          </a>
+          <a
+            class="icon_parent email"
+            href=""
+            title="Contact me"
+          >
+            <span>Contact me!</span>
+            <i class="fa-solid fa-xl fa-envelope icon"></i>
+          </a>
+          <h2>More</h2>
+          <a
+            class="icon_parent"
+            href="https://evalid1234.github.io/Blog/"
+            target="_blank"
+            title="Blog"
+          >
+            <span> Blog </span>
+            <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> </i>
           </a>
         </nav>
       </aside>
@@ -95,7 +126,15 @@
           </a>
           <span> | </span>
           <a
-            class="icon_parent"
+            class="icon_parent email"
+            href= "mailto:placeholder@gmail.com"
+            title="Contact me"
+          >
+            <i class="fa-solid fa-xl fa-envelope icon"></i>
+          </a>
+          <span> | </span>
+          <a
+            class="icon_parent  "
             href="https://www.linkedin.com/in/eduardo-lagunas/"
             title="My linkedin"
           >

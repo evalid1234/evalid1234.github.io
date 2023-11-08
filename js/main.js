@@ -46,7 +46,7 @@ const checkSlideElements = () => {
 window.addEventListener("scroll", checkSlideElements);
 window.addEventListener("load", checkSlideElements);
 
-const texts = ["SWE", "Web"];
+const texts = ["Programmer..."];
 
 let goingBackwards = false;
 let indexFromListOfWords = 0;
@@ -67,10 +67,11 @@ function typeHomeText() {
   }
   currentWord = texts[indexFromListOfWords];
 
+  // animate only once !
   if (deleting) {
-    letter = currentWord.slice(0, --index) + "|";
-    // text_animation_container.innerHTML = currentWord.slice(0, index);
-    // return;
+    // letter = currentWord.slice(0, --index) + "|";
+    text_animation_container.innerHTML = currentWord.slice(0, index);
+    return;
   } else {
     letter = currentWord.slice(0, ++index) + "|";
   }
@@ -214,8 +215,6 @@ const sidebar = document.querySelector(".sidebar");
 const CURRENT_MOBILE_SIZE_END = 701;
 
 menu_btn.addEventListener("click", () => {
-   
-
   menu_btn.classList.toggle("open");
   sidebar.classList.toggle("open");
 });
@@ -242,3 +241,50 @@ window.addEventListener(
   },
   true
 );
+
+function encryptEmail(email, provider, domain, key) {
+  let encryptedEmail = "";
+  const combinedEmail = email + provider + domain;
+
+  for (let i = 0; i < combinedEmail.length; i++) {
+    encryptedEmail += String.fromCharCode(combinedEmail.charCodeAt(i) ^ key);
+  }
+
+  return encryptedEmail;
+}
+
+// Email decryption function
+function decryptEmail(encryptedEmail, key) {
+  let email = "";
+
+  for (let i = 0; i < encryptedEmail.length; i++) {
+    email += String.fromCharCode(encryptedEmail.charCodeAt(i) ^ key);
+  }
+
+  return email;
+}
+
+// Configuration
+const encryptionKey = 42;
+const usernamePart = "pr" + "og" + "ra" + "m";
+const helperPart = "he" + "lp" + "er";
+const agePart = 25;
+const emailProvider = String.fromCharCode(64) + "gma" + "il";
+const emailDomain = ".com";
+
+// Encrypt the email
+const encryptedEmail = encryptEmail(
+  usernamePart + helperPart + agePart,
+  emailProvider,
+  emailDomain,
+  encryptionKey
+);
+
+// Decrypt the email
+const decryptedEmail = decryptEmail(encryptedEmail, encryptionKey);
+
+// Update email links
+const emailLinks = document.querySelectorAll(".email");
+emailLinks.forEach((link) => {
+  link.href = "mailto:" + decryptedEmail + "?subject=[VIA PERSONAL WEBSITE]:";
+});
