@@ -175,20 +175,20 @@
 
 .menu_btn.open .menu_btn_burger {
 
-  transform: translateX(50px);
+  transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
 
 .menu_btn.open .menu_btn_burger::before {
   box-shadow: var(--bar-shadow);
-  transform: rotate(45deg) translate(-35px, 35px);
+  transform: rotate(45deg) translate(35px, -35px);
 
 }
 
 .menu_btn.open .menu_btn_burger::after {
   box-shadow: var(--bar-shadow);
-  transform: rotate(-45deg) translate(-35px, -35px);
+  transform: rotate(-45deg) translate(35px, 35px);
 
 }
 
@@ -202,8 +202,8 @@
   opacity: 0;
   background-color: var(--secondary-page-background-color);
   color: var(--page-text-color);
-  width: 0;
-  max-width: 30%;
+  width: 300;
+  max-width: 50%;
   min-height: 100vh;
   padding: var(--padding-regular);
   padding-top: calc(var(--logo-height) * 2.2);
@@ -259,7 +259,6 @@
 }
 
 .sidebar.open {
-  width: 300px;
   opacity: 1;
 
 }
@@ -765,6 +764,11 @@ textarea {
 }
 
 @media screen and (max-width: 440px) {
+
+  .menu_btn { 
+    --bar-width: 32px;
+    --bar-height: 4px;
+  }
   .splash_text_layout {
     max-width: var(--body-width-xsmall);
   }
