@@ -47,8 +47,30 @@
       <div aria-ignore="true" id="spinner" role="status"></div>
     </div>
     <!---------Home Page --------->
+
     <main id="home">
-      <div class="navbar_container">
+      <aside class="sidebar">
+        <nav role="navigation"  > 
+          <a
+            class="icon_parent"
+            href="https://github.com/evalid1234"
+            title="My github"
+          >
+          <span>Github </span>
+            <i class="fa-brands fa-github fa-xl icon"></i>
+          </a>
+          <a
+            class="icon_parent"
+            href="https://www.linkedin.com/in/eduardo-lagunas/"
+            title="My linkedin"
+          >
+            <span>Linkedin</span>
+            <i class="fa-brands fa-linkedin fa-xl icon"></i>
+          </a>
+        </nav>
+      </aside>
+
+      <div class="mobile_navbar_container">
         <img
           aria-hidden="true"
           class="logo"
@@ -58,16 +80,28 @@
           alt="image"
         />
 
-        <div class="toggle_menu">
-          <i class="fa-regular fa-bars fa-lg icon"> </i>
+        <div tabindex="1" class="menu_btn">
+          <div class="menu_btn_burger"></div>
         </div>
-        <!-- <div>as;dfkljas;dlkf</div> -->
-        <nav role="navigation" class="navbar_items">
+
+        <nav role="navigation" class="large_navbar_container navbar_items">
           <!-- make this invisible then use an after to take up space-->
-          <a class="icon_parent text-center" href="#projects" title="Projects">
-            <i class="fa-solid fa-briefcase fa-xl icon" title="Project page">
-            </i>
+          <a
+            class="icon_parent"
+            href="https://github.com/evalid1234"
+            title="My github"
+          >
+            <i class="fa-brands fa-github fa-xl icon"></i>
           </a>
+          <span> | </span>
+          <a
+            class="icon_parent"
+            href="https://www.linkedin.com/in/eduardo-lagunas/"
+            title="My linkedin"
+          >
+            <i class="fa-brands fa-linkedin fa-xl icon"></i>
+          </a>
+          <span> | </span>
 
           <a
             class="icon_parent text-center"
@@ -76,23 +110,6 @@
             title="Blog"
           >
             <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> </i>
-          </a>
-          <a
-            class="icon_parent text-center"
-            href="https://evalid1234.github.io/About/"
-            target="https://evalid1234.github.io/About/"
-            title="About"
-          >
-            <i class="fa-solid fa-blog fa-lg icon" title="About page"> </i>
-          </a>
-
-          <a
-            class="icon_parent text-center"
-            href=""
-            target="_self"
-            title="Blog"
-          >
-            <i class="fa-solid fa-blog fa-lg icon" title="Contact page"></i>
           </a>
         </nav>
       </div>
@@ -129,7 +146,7 @@
         <!-- Call to action  -->
         <p class="text-center m-3 mb-5">
           <button class="button">Projects</button>
-          <a class="cta_link" href=""> About me &rarr;</a>
+          <a class="cta_link" href=""> About Ed &#10230; </a>
         </p>
         <!-- Skills -->
         <ul class="skills m-3">
@@ -164,7 +181,7 @@
         <!-- Splash page Action icons -->
       </section>
       <footer class="slide_in m-3" id="footer">
-        <div class="navbar_items">
+        <!-- <div class="navbar_items">
           <a
             class="icon_parent"
             href="https://github.com/evalid1234"
@@ -180,7 +197,7 @@
           >
             <i class="fa-brands fa-linkedin fa-xl icon"></i>
           </a>
-        </div>
+        </div> -->
         <p>
           <small> &copy; evalid1234 | 2023.</small>
         </p>
