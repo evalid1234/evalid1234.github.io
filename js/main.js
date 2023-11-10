@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //home fade in
 window.addEventListener("load", function () {
   const home = document.querySelector("#home");
-  home.classList.add("show");
+  if (home) {
+    home.classList.add("show");
+  }
 });
 
 /* fade in */
@@ -56,58 +58,59 @@ let letter = "";
 let deleting = false;
 let startAnimation = false;
 const text_animation_container = document.querySelector("#typing-text");
-
-function typeHomeText() {
-  if (!startAnimation) {
-    return;
-  }
-
-  if (indexFromListOfWords === texts.length) {
-    indexFromListOfWords = 0;
-  }
-  currentWord = texts[indexFromListOfWords];
-
-  // animate only once !
-  if (deleting) {
-    // letter = currentWord.slice(0, --index) + "|";
-    text_animation_container.innerHTML = currentWord.slice(0, index);
-    return;
-  } else {
-    letter = currentWord.slice(0, ++index) + "|";
-  }
-
-  text_animation_container.innerHTML = letter;
-
-  if (letter.length - 1 === currentWord.length && !deleting) {
-    setTimeout(() => {
-      deleting = true;
-    }, 1000);
-  }
-
-  if (letter.length - 1 === 0 && deleting) {
-    deleting = false;
-    indexFromListOfWords++;
-    index = 0;
-  }
-
-  // continue as many times as you want
-  setTimeout(typeHomeText, 300);
-}
-
-// create the observer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      startAnimation = true;
-      typeHomeText();
-    } else {
-      startAnimation = false;
+if (text_animation_container) {
+  function typeHomeText() {
+    if (!startAnimation) {
+      return;
     }
-  });
-});
 
-// observe the element
-observer.observe(document.querySelector("#typing-text"));
+    if (indexFromListOfWords === texts.length) {
+      indexFromListOfWords = 0;
+    }
+    currentWord = texts[indexFromListOfWords];
+
+    // animate only once !
+    if (deleting) {
+      // letter = currentWord.slice(0, --index) + "|";
+      text_animation_container.innerHTML = currentWord.slice(0, index);
+      return;
+    } else {
+      letter = currentWord.slice(0, ++index) + "|";
+    }
+
+    text_animation_container.innerHTML = letter;
+
+    if (letter.length - 1 === currentWord.length && !deleting) {
+      setTimeout(() => {
+        deleting = true;
+      }, 1000);
+    }
+
+    if (letter.length - 1 === 0 && deleting) {
+      deleting = false;
+      indexFromListOfWords++;
+      index = 0;
+    }
+
+    // continue as many times as you want
+    setTimeout(typeHomeText, 300);
+  }
+
+  // create the observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startAnimation = true;
+        typeHomeText();
+      } else {
+        startAnimation = false;
+      }
+    });
+  });
+
+  // observe the element
+  observer.observe(document.querySelector("#typing-text"));
+}
 
 /* FORMS */
 
@@ -201,8 +204,7 @@ const showToolTip = (element) => {
   }
 };
 
-if (isMobileBrowser) {
-  console.log("browsing on mobile");
+if (isMobileBrowser && skill_items) {
   skill_items.forEach((skill) => {
     skill.addEventListener("click", () => {
       showToolTip(skill);
