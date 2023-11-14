@@ -48,7 +48,7 @@ const checkSlideElements = () => {
 window.addEventListener("scroll", checkSlideElements);
 window.addEventListener("load", checkSlideElements);
 
-const texts = ["Software Dev"];
+const texts = ["Software Dev", "Full Stack Dev", "Tutor"];
 
 let goingBackwards = false;
 let indexFromListOfWords = 0;
@@ -71,9 +71,9 @@ if (text_animation_container) {
 
     // animate only once !
     if (deleting) {
-      // letter = currentWord.slice(0, --index) + "|";
-      text_animation_container.innerHTML = currentWord.slice(0, index);
-      return;
+      letter = currentWord.slice(0, --index) + "|";
+      // text_animation_container.innerHTML = currentWord.slice(0, index);
+      // return;
     } else {
       letter = currentWord.slice(0, ++index) + "|";
     }
@@ -93,7 +93,7 @@ if (text_animation_container) {
     }
 
     // continue as many times as you want
-    setTimeout(typeHomeText, 300);
+    setTimeout(typeHomeText, 150);
   }
 
   // create the observer
@@ -230,7 +230,99 @@ emailLinks.forEach((link) => {
 const course_button = document.querySelector(".course_button");
 const foundational_courses = document.querySelector(".foundational_courses");
 const computational_courses = document.querySelector(".computational_courses");
-course_button.addEventListener("click", () => {
-  computational_courses.classList.toggle("active");
-  foundational_courses.classList.toggle("active");
-});
+
+if (course_button && foundational_courses && computational_courses) {
+  course_button.addEventListener("click", () => {
+    computational_courses.classList.toggle("active");
+    foundational_courses.classList.toggle("active");
+  });
+}
+
+const sort_video = document.querySelector("#sort_video");
+const pause_btns = document.querySelectorAll(".pause_btn");
+const text_hide_btns = document.querySelectorAll(".text_btn");
+const video_hide_btns = document.querySelectorAll(".hide_video_btn");
+
+function toggle_pause(element) {
+  if (element.paused) {
+    element.play();
+  } else {
+    element.pause();
+  }
+}
+
+// REFACTOR TO USE OBJECTS INSTEAD OF STRING LITERAL
+
+function toggle_button_text(element) {
+  const parentElement = element.parentElement.parentElement;
+  const childElement = element.children[0];
+  const message = childElement.innerHTML.toLowerCase();
+  switch (message) {
+    case "pause":
+      childElement.innerHTML = "Play";
+      break;
+    case "play":
+      childElement.innerHTML = "Pause";
+      break;
+    // case "hide text":
+    //   childElement.innerHTML = "Show text";
+    //   break;
+    // case "show text":
+    //   childElement.innerHTML = "Hide text";
+    //   break;
+
+    default:
+      break;
+  }
+}
+
+function toggle_class_to_content_div(button_element, className) {
+  const parentElement = button_element.parentElement.parentElement;
+  if (
+    parentElement.classList.contains("hide_text") &&
+    className === "focus_text"
+  ) {
+    parentElement.classList.remove("hide_text");
+  } else if (
+    parentElement.classList.contains("focus_text") &&
+    className === "hide_text"
+  ) {
+    parentElement.classList.remove("focus_text");
+  }
+  parentElement.classList.toggle(className);
+}
+
+if (pause_btns) {
+  pause_btns.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.classList.contains("sort") && sort_video) {
+        toggle_pause(sort_video);
+        toggle_button_text(button);
+      }
+    });
+  });
+}
+
+if (text_hide_btns) {
+  text_hide_btns.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.classList.contains("sort") && sort_video) {
+        //  calls
+        toggle_class_to_content_div(button, "hide_text");
+        // toggle_button_text(button);
+      }
+    });
+  });
+}
+
+if (video_hide_btns) {
+  video_hide_btns.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.classList.contains("sort") && sort_video) {
+        toggle_class_to_content_div(button, "focus_text");
+
+        //  calls
+      }
+    });
+  });
+}

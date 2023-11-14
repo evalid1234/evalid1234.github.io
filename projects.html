@@ -5,12 +5,7 @@
     <link rel="icon" type="image/x-icon" href="/images/fav.ico" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/projects.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
-      rel="stylesheet"
-    />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,19 +19,18 @@
       defer
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <script
-      defer
+    <script
       src="https://kit.fontawesome.com/9c050fdc22.js"
       crossorigin="anonymous"
-    ></script> -->
-
+    ></script>
+    <!-- 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> -->
 
     <script src="/js/main.js" defer></script>
   </head>
@@ -131,29 +125,66 @@
       </nav>
     </div>
 
-    <main id="home" class="fade_in container">
-      <header>
-        <h1 class="title">Much more on the way!</h1>
-      </header>
+    <main id="home" class="fade_in main_projects_layout">
+      <section id="1" class="project_container">
+        <a target="_blank" href="https://evalid1234.github.io/sorts">
+          <video class="video_container" autoplay muted loop id="sort_video">
+            <source src="/videos/sorts_video_2.mp4" type="video/mp4" />
+            Your browser does not support the video tag. This was a video of the
+            project. Feel free to click the link and check it out instead!
+          </video>
+        </a>
 
-      <div id="1" class="project_container">
-        <h2 class="title">Sorting Project</h2>
-        <p></p>
+        <div class="content_container">
+          <h2 class="title">Sorting visualizer</h2>
+          <p>
+            Stack: <strong><em> vanilla JS, HTML, and CSS</em></strong>
+          </p>
+          <p class="description">
+            An interactive sorting visualizer created in pure vanilla JS, HTML,
+            and CSS. The sorting is done via JS and canvas and showcases
+            exceptional understanding of the most foundational web tech stack as
+            well as resonsive design.
+          </p>
+          <p class="small-description">
+            An interactive sorting visualizer that showcases exceptional
+            understanding of the most foundational web technologies.
+          </p>
 
-        <p class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          provident quibusdam inventore autem commodi quis minima. Cumque
-          officiis hic sint iste, nobis maxime beatae voluptatum. Cum ipsum
-          pariatur obcaecati at.
-        </p>
-        <p class="skill_learned">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
-          nulla harum dolorum sed fuga fugiat, non libero labore debitis odio
-          dicta, deleniti, dignissimos possimus! Ut repellendus earum facere
-          pariatur culpa.
-        </p>
-      </div>
+          <div class="button_group_container">
+            <button class="icon_parent pause_btn sort button">
+              <span>Pause</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z"
+                />
+              </svg>
+            </button>
+            <button class="button text_btn sort"><span>Hide text</span></button>
+            <button class="button hide_video_btn sort">
+              <span>Focus Text</span>
+            </button>
+
+            <a
+              target="_blank"
+              class="button cta_button"
+              href="https://evalid1234.github.io/sorts"
+              >Try it</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
+    <h1 class="title message">More coming soon...</h1>
 
     <footer class="fade_in m-3" id="footer">
       <div class="footer_icon">
@@ -164,6 +195,7 @@
         >
           <i class="fa-brands fa-github fa-xl icon"></i>
         </a>
+        <span> | </span>
         <a
           class="icon_parent"
           href="https://www.linkedin.com/in/eduardo-lagunas/"

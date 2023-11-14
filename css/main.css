@@ -3,7 +3,7 @@
 @import "/css/utils/animations.css";
 @import "/css/utils/cta.css";
 @import "/css/utils/navbar.css" screen and (max-width: 700px),
-  screen and (max-width: 440px);
+screen and (max-width: 440px);
 
 /* variables */
 :root {
@@ -48,6 +48,7 @@
   --button-border: 1px outset;
   --button-shadow: 2px 2px #d0d0d0;
   --button-link-transitions: 1s linear;
+  --default-icon-size: 1.5rem;
 
   /* page formatting */
   --title-margin-from-top: 2rem;
@@ -248,6 +249,13 @@ body {
 
 /* -------------NAVBAR--------- */
 
+/* typing animation */
+
+.typing-div {
+  max-width: 100%;
+  font-size: var(--font-title);
+}
+
 /* ----------------UTILS ---------- */
 .visible {
   display: block;
@@ -268,11 +276,14 @@ body {
 #footer {
   font-weight: var(--highlighted-font-weight);
 }
+
 .footer_icon {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
+
 .footer_icon .icon_parent {
+  padding: var(--padding-regular);
   margin: var(--margin-regular);
 }
 
@@ -308,7 +319,7 @@ body {
   font-size: var(--font-title);
 }
 
-.splash_title > span {
+.splash_title>span {
   font-size: var(--font-large);
 }
 
@@ -321,9 +332,18 @@ body {
   font-size: var(--font-large);
 }
 
+
 /* mobile views */
 
 @media screen and (max-width: 700px) {
+  .typing-div {
+    font-size: var(--font-large);
+  }
+
+  .logo {
+    height: 32px;
+  }
+
   .splash_text_layout {
     padding: 0 var(--margin-regular);
     max-width: var(--body-width-medium);
@@ -339,7 +359,7 @@ body {
     font-size: var(--font-title);
   }
 
-  .splash_title > span {
+  .splash_title>span {
     font-size: var(--font-small);
   }
 
@@ -360,6 +380,10 @@ body {
 }
 
 @media screen and (max-width: 440px) {
+  .typing-div {
+    font-size: var(--font-xsmall-title);
+  }
+
   .splash_text_layout {
     max-width: var(--body-width-xsmall);
   }
@@ -368,15 +392,15 @@ body {
     font-size: var(--font-xsmall-title);
   }
 
-  .splash_title > span {
+  .splash_title>span {
     font-size: var(--font-xsmall-small);
   }
 
-  .splash_title > span {
+  .splash_title>span {
     font-size: var(--font-xsmall-small);
   }
 
-  .splash_text > span {
+  .splash_text>span {
     display: inline-block;
   }
 
