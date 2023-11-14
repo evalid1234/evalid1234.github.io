@@ -1,0 +1,40 @@
+:root {
+    --default-icon-size: 1.5rem;
+    --icon-transition: all 1s linear;
+    --icon-default-color: white;
+    --icon-hover-color: #55aad9;
+}
+
+/* -------------ICONS--------- */
+
+.icon_parent {
+    text-decoration: none;
+    display: flex;
+    color: var(--icon-default-color);
+    transition: var(--icon-transition);
+}
+
+.icon_parent span {
+
+    padding: 0 .5rem;
+}
+
+.icon {
+     transition: var(--icon-transition);
+    color: var(--icon-default-color);
+    height: var(--default-icon-size);
+    width: var(--default-icon-size);
+    font-size: var(--default-icon-size);
+
+}
+
+.icon_parent:hover,
+.icon_parent:active,
+.icon_parent:focus {
+    color: var(--icon-hover-color);
+}
+.icon_parent:hover .icon,
+.icon_parent:active .icon,
+.icon_parent:focus .icon{
+    color: var(--icon-hover-color);
+}
