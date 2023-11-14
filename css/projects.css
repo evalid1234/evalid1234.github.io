@@ -1,0 +1,337 @@
+@import "/css/utils/reset.css";
+@import "/css/utils/navbar.css";
+@import "/css/utils/animations.css";
+@import "/css/utils/cta.css";
+@import "/css/utils/navbar.css" screen and (max-width: 700px),
+screen and (max-width: 440px);
+
+:root {
+  --page-background: radial-gradient(circle, #262626 10%, black);
+  --page-primary-color: #55aad9;
+  --page-primary-color-hover: #5ebdf0;
+  --text-secondary: rgb(255, 255, 255);
+  --page-text-color: #fff;
+
+  /* project styling */
+  --project-border-radius: 10px;
+  --project-background-color: inherit;
+  --project-box-shadow: 0px 0px 4px 1px gray;
+  --project-border: 1px solid rgb(72, 72, 72);
+  --project-color: white;
+
+  /* font */
+  --title-size: calc(1rem * 3);
+  /* layout */
+  --margin: 1rem;
+  --padding: 1rem;
+
+  /* icons */
+  --default-icon-size: 1.5rem;
+  --default-icon-color: white;
+  /* button */
+  --default-button-size: 1.2rem;
+  --button-padding: 10px;
+  --button-border-radius: 5px;
+  --button-box-shadow: none;
+  --button-color: white;
+  --button-border: 1px solid #397696;
+  --button-background-color: #55aad9;
+  --button-hover-background-color: #397696;
+  --button-hover-color: white;
+  --button-transition: all 1s linear;
+  --button-hover-shadow: 0px 0px 2px 2px rgb(105, 148, 170);
+  --tb-bg-color: darkorange;
+  --tb-bg-hover-color: rgb(198, 109, 0);
+  --tb-border: 1px solid #DEA421;
+  --tb-shadow-hover: 0px 0px 2px 2px rgb(243, 166, 71);
+}
+
+/* buttons */
+.button_group_container {
+  display: flex;
+}
+
+.button {
+  margin-right: var(--margin);
+  text-decoration: none;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  box-shadow: var(--button-box-shadow);
+  color: var(--button-color);
+  border: var(--button-border);
+  background-color: var(--button-background-color);
+  transition: var(--button-transition);
+  font-size: var(--default-button-size)
+}
+
+.button .icon {
+  color: var(--button-color);
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  color: var(--button-hover-color);
+  background-color: var(--button-hover-background-color);
+  box-shadow: var(--button-hover-shadow);
+}
+
+.button:hover .icon {
+  color: var(--button-color);
+}
+
+.cta_button.button {
+  border: var(--tb-border);
+  background-color: var(--tb-bg-color);
+}
+
+.cta_button.button:hover,
+.cta_button.button:active,
+.cta_button.button:focus {
+  background-color: var(--tb-bg-hover-color);
+  box-shadow: var(--tb-shadow-hover);
+}
+
+/* videos */
+.video_container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--padding) 0;
+}
+
+.content_container {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  padding: var(--padding);
+
+}
+
+/* utils */
+.content_container.hide_text {
+  background: transparent;
+  color: transparent;
+
+}
+
+.content_container.hide_text p {
+  color: transparent;
+}
+
+
+.content_container.hide_text .button:hover,
+.content_container.hide_text .button:active,
+.content_container.hide_text .button:focus {
+  opacity: 75%;
+}
+
+
+.content_container.focus_text {
+  background: black;
+}
+
+
+/* nav */
+.mobile_navbar_container {
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+/* fonts */
+.title {
+  font-size: var(--title-size);
+}
+
+/* body */
+body {
+  background: var(--page-background);
+  color: var(--page-text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.icon {
+  color: var(--page-text-color);
+}
+
+.message {
+  color: var(--page-text-color);
+  text-align: center;
+  margin: var(--margin);
+}
+
+#home {
+  color: var(--page-text-color);
+}
+
+.main_projects_layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+
+}
+
+.project_container {
+  flex: 1 0 100%;
+  position: relative;
+  min-height: 75vh;
+  max-height: 100vh;
+  max-width: 80%;
+
+  padding: 0 var(--padding);
+  margin: var(--margin);
+}
+
+.description {
+  color: var(--text-secondary);
+}
+
+/* footer */
+#footer {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: var(--margin);
+  padding: var(--padding);
+  color: var(--page-text-color);
+}
+
+
+/* footer */
+.footer_icon {
+  display: flex;
+  justify-content: center;
+}
+
+
+.footer_icon .icon_parent {
+  margin: 0 var(--margin);
+  padding: 0;
+}
+
+.icon_parent {
+  padding: var(--button-padding);
+}
+
+.icon {
+  transition: var(--button-transition);
+  height: var(--default-icon-size);
+  color: var(--default-icon-color);
+  width: var(--default-icon-size);
+}
+
+.icon:hover,
+.icon:active,
+.icon:focus {
+  color: var(--page-primary-color);
+}
+
+.small-description {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
+    height: 32px;
+  }
+
+  .title {
+    --title-size: 2rem;
+  }
+
+  .project_container {
+    padding: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+
+  .project_container {
+    min-height: 50vh;
+    max-height: 100vh;
+    font-size: smaller;
+  }
+
+  .title {
+    --title-size: 1.2rem;
+  }
+
+  .content_container {
+    height: 50%;
+
+  }
+
+  .button_group_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .button {
+    margin: inherit 5px;
+    padding: 5px;
+    box-shadow: none;
+    background-color: var(--button-background-color);
+    transition: var(--button-transition);
+    font-size: 14px;
+  }
+
+  .button .icon {
+    height: 1.2rem;
+    color: 1.2rem;
+    width: 1.2rem;
+  }
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .small-description {
+    display: block;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .button {
+
+    font-size: 12px;
+  }
+
+  .button .icon {
+    height: 1rem;
+    color: 1rem;
+    width: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .button_group_container {
+    padding: 0;
+  }
+
+  .button {
+    margin: 3px;
+  }
+
+}

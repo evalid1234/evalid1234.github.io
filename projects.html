@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Projects | Ed Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/fav.ico" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/projects.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/9c050fdc22.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <script src="/js/main.js" defer></script>
+  </head>
+
+  <body>
+    <noscript class="no_script">
+      <h1>Oh no...</h1>
+      <h2>
+        <strong><em>Javascript disabled</em></strong>
+      </h2>
+      <p>
+        Sorry, currently this site uses alot of JS. I will be adding fallback
+        support soon. please enable JS to continue. Or check back later!
+      </p>
+    </noscript>
+    <div class="loading_group">
+      <h1 aria-hidden="true" id="spinner_message">Loading...</h1>
+
+      <i id="spinner" class="fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+    <!---------Home Page --------->
+    <aside class="sidebar">
+      <nav role="navigation">
+        <h2>Socials</h2>
+        <a
+          class="icon_parent"
+          href="https://github.com/evalid1234"
+          title="My github"
+        >
+          <span>Github </span>
+          <i class="fa-brands fa-github fa-xl icon"></i>
+        </a>
+
+        <a
+          class="icon_parent"
+          href="https://www.linkedin.com/in/eduardo-lagunas/"
+          title="My linkedin"
+        >
+          <span>Linkedin</span>
+          <i class="fa-brands fa-linkedin fa-xl icon"></i>
+        </a>
+        <a class="icon_parent email" href="" title="Contact me">
+          <span>Contact me!</span>
+          <i class="fa-solid fa-xl fa-envelope icon"></i>
+        </a>
+        <a
+          class="icon_parent"
+          href="https://evalid1234.github.io/Blog/"
+          target="_blank"
+          title="Blog"
+        >
+          <span> Blog </span>
+          <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> </i>
+        </a>
+      </nav>
+    </aside>
+    <!-- nav container -->
+    <div class="mobile_navbar_container">
+      <a href="/">
+        <img
+          aria-hidden="true"
+          class="logo"
+          height="50px"
+          width="200px"
+          src="images/white_logo.svg"
+          alt="image"
+        />
+      </a>
+
+      <div tabindex="1" class="menu_btn">
+        <div class="menu_btn_burger"></div>
+      </div>
+
+      <nav role="navigation" class="large_navbar_container navbar_items">
+        <a
+          class="icon_parent email"
+          href="mailto:placeholder@gmail.com"
+          title="Contact me"
+        >
+          <i class="fa-solid fa-xl fa-envelope icon"></i>
+        </a>
+        <span> | </span>
+
+        <a
+          class="icon_parent text-center"
+          href="https://evalid1234.github.io/Blog/"
+          target="_blank"
+          title="Blog"
+        >
+          <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> </i>
+        </a>
+      </nav>
+    </div>
+
+    <main id="home" class="fade_in main_projects_layout">
+      <section id="1" class="project_container">
+        <a target="_blank" href="https://evalid1234.github.io/sorts">
+          <video class="video_container" autoplay muted loop id="sort_video">
+            <source src="/videos/sorts_video_2.mp4" type="video/mp4" />
+            Your browser does not support the video tag. This was a video of the
+            project. Feel free to click the link and check it out instead!
+          </video>
+        </a>
+
+        <div class="content_container">
+          <h2 class="title">Sorting visualizer</h2>
+          <p>
+            Stack: <strong><em> vanilla JS, HTML, and CSS</em></strong>
+          </p>
+          <p class="description">
+            An interactive sorting visualizer created in pure vanilla JS, HTML,
+            and CSS. The sorting is done via JS and canvas and showcases
+            exceptional understanding of the most foundational web tech stack as
+            well as resonsive design.
+          </p>
+          <p class="small-description">
+            An interactive sorting visualizer that showcases exceptional
+            understanding of the most foundational web technologies.
+          </p>
+
+          <div class="button_group_container">
+            <button class="icon_parent pause_btn sort button">
+              <span>Pause</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z"
+                />
+              </svg>
+            </button>
+            <button class="button text_btn sort"><span>Hide text</span></button>
+            <button class="button hide_video_btn sort">
+              <span>Focus Text</span>
+            </button>
+
+            <a
+              target="_blank"
+              class="button cta_button"
+              href="https://evalid1234.github.io/sorts"
+              >Try it</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <h1 class="title message">More coming soon...</h1>
+
+    <footer class="fade_in m-3" id="footer">
+      <div class="footer_icon">
+        <a
+          class="icon_parent"
+          href="https://github.com/evalid1234"
+          title="My github"
+        >
+          <i class="fa-brands fa-github fa-xl icon"></i>
+        </a>
+        <span> | </span>
+        <a
+          class="icon_parent"
+          href="https://www.linkedin.com/in/eduardo-lagunas/"
+          title="My linkedin"
+        >
+          <i class="fa-brands fa-linkedin fa-xl icon"></i>
+        </a>
+      </div>
+      <p>
+        <small> &copy; evalid1234 | 2023.</small>
+      </p>
+    </footer>
+  </body>
+</html>
