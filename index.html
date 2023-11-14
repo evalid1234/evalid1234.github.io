@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home | Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./images/fav.ico" />
+    <title>Home | Ed Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/fav.ico" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +38,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <script src="./js/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
   </head>
 
   <body>
@@ -97,7 +97,7 @@
       </aside>
 
       <div class="mobile_navbar_container">
-        <a href="https://evalid1234.github.io">
+        <a href="/">
           <img
             aria-hidden="true"
             class="logo"
@@ -113,29 +113,12 @@
         </div>
 
         <nav role="navigation" class="large_navbar_container navbar_items">
-          <!-- make this invisible then use an after to take up space-->
-          <a
-            class="icon_parent"
-            href="https://github.com/evalid1234"
-            title="My github"
-          >
-            <i class="fa-brands fa-github fa-xl icon"></i>
-          </a>
-          <span> | </span>
           <a
             class="icon_parent email"
             href="mailto:placeholder@gmail.com"
             title="Contact me"
           >
             <i class="fa-solid fa-xl fa-envelope icon"></i>
-          </a>
-          <span> | </span>
-          <a
-            class="icon_parent"
-            href="https://www.linkedin.com/in/eduardo-lagunas/"
-            title="My linkedin"
-          >
-            <i class="fa-brands fa-linkedin fa-xl icon"></i>
           </a>
           <span> | </span>
 
@@ -182,8 +165,8 @@
 
         <!-- Call to action  -->
         <p class="text-center m-3 mb-5">
-          <button class="button">Projects</button>
-          <a class="cta_link" href=""> About Ed &#10230; </a>
+          <a class="button" href="/projects.html">Projects</a>
+          <a class="cta_link" href="/about.html"> Learn more &#10230; </a>
         </p>
         <!-- Skills -->
         <ul class="skills m-3">
@@ -218,7 +201,7 @@
         <!-- Splash page Action icons -->
       </section>
       <footer class="slide_in m-3" id="footer">
-        <!-- <div class="navbar_items">
+        <div class="footer_icon">
           <a
             class="icon_parent"
             href="https://github.com/evalid1234"
@@ -226,7 +209,6 @@
           >
             <i class="fa-brands fa-github fa-xl icon"></i>
           </a>
-          <span> | </span>
           <a
             class="icon_parent"
             href="https://www.linkedin.com/in/eduardo-lagunas/"
@@ -234,204 +216,11 @@
           >
             <i class="fa-brands fa-linkedin fa-xl icon"></i>
           </a>
-        </div> -->
+        </div>
         <p>
           <small> &copy; evalid1234 | 2023.</small>
         </p>
       </footer>
     </main>
-    <!-- -------projects------- -->
   </body>
 </html>
-
-<!-- <article id="projects" class="p-4">
-      <span class="navbarOffset"></span>
-      <header>
-        <h2 class="text-center">Personal/Academic Projects</h2>
-      </header>
-       sorting project -->
-<!-- <section class="container format fade_in">
-        <div class="row slide_in mt-4">
-          <div class="card customCard col-sm-7 col-md-6">
-            <h4 class="card-header">Sorting Project</h4>
-            <a href="https://evalid1234.github.io/sorts/">
-              <img
-                class="img-fluid rounded w-100"
-                src="images/sorting_screenshot.png"
-                alt="sorting project"
-                target="_blank"
-              />
-            </a>
-            <details class="mt-3 mb-3">
-              <summary>
-                Sorting animations made in vanilla Javascript, html and css...
-              </summary>
-
-              <h3>Lessons Learned</h3>
-              <ul>
-                <li>
-                  How to create animations on canvas and basic principles of
-                  animations
-                </li>
-                <li>Using logic to change animations</li>
-                <li>
-                  Using Javascript to create dynamic and responsive webpages
-                </li>
-                <li>Solidified css knowledge with grids and flexboxes</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </section> -->
-<!-- To do list project -->
-<!-- <section class="container format fade_in">
-        <div class="row justify-content-end slide_in mt-4">
-          <div class="card customCard col-sm-7 col-md-6">
-            <h4 class="card-header">Checked In</h4>
-            <a href="https://checked-in-notes.onrender.com">
-              <img
-                class="w-100 img-fluid rounded"
-                src="images/to-do-list.png"
-                alt="sorting project"
-                target="_blank"
-              />
-            </a>
-            <details class="mt-3 mb-3">
-              <summary>
-                Full stack MongoDB, Express, React, Node.js (MERN) project...
-              </summary>
-
-              <h3>Lessons Learned</h3>
-              <ul>
-                <li>
-                  Setting up and configuring DBs, connecting to other APIs.
-                </li>
-                <li>Creating API end points</li>
-                <li>Developing and configuring servers.</li>
-                <li>
-                  Upkeeping Restful practices and implementing CRUD operations
-                </li>
-                <li>React management</li>
-                <li>
-                  Website security:
-                  <ul>
-                    <li>Authentication with jwt</li>
-                    <li>Input sanitations</li>
-                    <li>Data Encryptions</li>
-                    <li>Login limiting</li>
-                    <li>Cors for resource protection</li>
-                    <li>Middleware protections</li>
-                    <li>Etc...</li>
-                  </ul>
-                </li>
-                <li>Deploying projects</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </section>
-      <div class="text-center mt-4">
-        <a class="button slide_in p-3 w-50" href="#contact">Get in touch!</a>
-      </div>
-    </article> -->
-<!---------contact--------->
-<!-- <article id="contact">
-      <span class="navbarOffset"></span>
-      <section
-        class="container p-4 d-flex justify-content-center mb-5 mt-5 fade_in slide_in"
-      > -->
-<!-- maxlength pattern  -->
-<!-- <div
-          class="messageContainer row d-flex flex-sm-column-reverse flex-md-row justify-content-center"
-        >
-          <form
-            class="form col-sm-12 col-md-7"
-            action="https://formsubmit.co/da223355d26640c943002c401f3b0775"
-            method="POST"
-          >
-            <h3 class="text-center mb-3">
-              <b>Lets connect!</b>
-            </h3>
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value="Hello, I normally respond within 1-2 business days. So please allow me a bit of time to respond. Thanks for contacting me!"
-            />
-            <input
-              type="hidden"
-              name="_next"
-              value="http://evalid1234.github.io/thanks.html"
-            />
-            <div
-              id="feedback"
-              class="invisible font-weight-bold p-2 text-center feedback"
-            ></div>
-            <div class="row">
-              <div class="col-5">
-                <label for="name">Name:</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  title="Enter your name. No numbers or special characters"
-                  maxlength="50"
-                  pattern="[a-zA-Z\s]+"
-                />
-              </div>
-              <div class="col-7">
-                <label for="subject">Email Header:</label>
-                <br />
-                <input
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  title="Enter an email heading"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <label for="email">Email: example@gmail.com</label>
-                <br />
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  title="Enter an email address"
-                  placeholder="Email"
-                  required
-                  inputmode="email"
-                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <label for="message">Message:</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message (100 Chars max)"
-                  required
-                  rows="5"
-                  cols="20"
-                  maxlength="100"
-                  pattern="[a-zA-Z0-9\s,._]*"
-                ></textarea>
-                <button
-                  class="mt-4 w-50 button"
-                  type="submit"
-                  spellcheck="true"
-                >
-                  Send email
-                </button>
-              </div>
-            </div>
-          </form>
-          <div class="messageImage col-sm-12 col-md-5"></div>
-        </div> -->
-<!-- </section> -->
-<!-- </article> -->

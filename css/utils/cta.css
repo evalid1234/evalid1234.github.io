@@ -1,0 +1,22 @@
+:root { 
+    --cta-text-color: white;
+    --cta-font-size: calc(1rem * 1.25);
+    --cta-transition: all 1s linear;
+    --cta-margin: 1rem;
+    --cta-hover-color: #55aad9;
+}
+
+
+.cta_link {
+  text-decoration: none;
+  color: var(--cta-text-color);
+  font-size: var(--cta-font-size);
+  transition: var(--cta-transition);
+  margin: var(--cta-margin)
+}
+
+.cta_link:hover,
+.cta_link:active,
+.cta_link:focus {
+  color: var(--cta-hover-color);
+}

@@ -1,0 +1,75 @@
+/* -------------ANIMATIONS--------- */
+.fade_in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade_in.visible {
+  opacity: 1;
+}
+
+.slide_in {
+  opacity: 0;
+  transform: translateX(-50%);
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.slide_in.left {
+  animation-name: slideFromLeft;
+}
+
+.slide_in.right {
+  animation-name: slideFromRight;
+}
+
+
+/* -------------LOADING SPINNER--------- */
+/* hardcoded, no future plans to overwrite, if so it will be a new page..probably */
+#spinner {
+  color: #ff6a00;
+  font-size: 5rem;
+
+  /* animation: spin 2s ease-out infinite forwards; */
+}
+
+.loading_group {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#spinner_message {
+  margin: 2rem 0;
+  color: #fff;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
