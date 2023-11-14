@@ -48,7 +48,7 @@ const checkSlideElements = () => {
 window.addEventListener("scroll", checkSlideElements);
 window.addEventListener("load", checkSlideElements);
 
-const texts = ["Programmer..."];
+const texts = ["Software Dev"];
 
 let goingBackwards = false;
 let indexFromListOfWords = 0;
@@ -112,70 +112,6 @@ if (text_animation_container) {
   observer.observe(document.querySelector("#typing-text"));
 }
 
-/* FORMS */
-
-// const form = document.querySelector("form");
-// const feedback = document.querySelector("#feedback");
-
-// const messageInput = document.getElementById("message");
-
-// messageInput.addEventListener("input", function (event) {
-//   const input = event.target;
-//   const inputValue = input.value;
-//   const cleanedInputValue = inputValue.replace(/[^a-zA-Z0-9\s,._-]/g, "");
-//   input.value = cleanedInputValue;
-// });
-
-// form.addEventListener("input", function (event) {
-//   const input = event.target;
-
-//   if (input.checkValidity()) {
-//     input.classList.remove("invalid");
-//     input.classList.add("valid");
-//     feedback.classList.remove("visible");
-//     feedback.classList.add("invisible");
-//     feedback.textContent = "";
-//   } else {
-//     input.classList.remove("valid");
-//     input.classList.add("invalid");
-//     feedback.classList.remove("invisible");
-//     feedback.classList.add("visible");
-
-//     // Provide specific feedback messages for each input field
-//     switch (input.name) {
-//       case "name":
-//         feedback.textContent =
-//           "Please enter a valid name (letters and spaces only)";
-//         break;
-//       case "subject":
-//         feedback.textContent =
-//           "Please enter a valid email header (no numbers or special characters)";
-//         break;
-//       case "email":
-//         if (!input.value.includes("@")) {
-//           feedback.textContent = 'Please include an "@" in the email address';
-//         } else if (!input.value.includes(".com")) {
-//           feedback.textContent =
-//             "Please include a valid domain (.com, .org, etc.)";
-//         } else {
-//           feedback.textContent = "Please enter a valid email address";
-//         }
-//         break;
-//       case "message":
-//         if (input.value.length > 100) {
-//           feedback.textContent = "Message cannot be longer than 100 characters";
-//         } else {
-//           feedback.textContent =
-//             "Please enter a valid message (letters, numbers, spaces, dashes, and underscores only)";
-//         }
-//         break;
-//       default:
-//         feedback.textContent = "Please fill out all required fields";
-//         break;
-//     }
-//   }
-// });
-
 const isMobileBrowser = (window.mobileAndTabletCheck = (function () {
   let check = false;
   (function (a) {
@@ -223,7 +159,6 @@ menu_btn.addEventListener("click", () => {
 
 menu_btn.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
-    // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
     menu_btn.click();
@@ -289,4 +224,13 @@ const decryptedEmail = decryptEmail(encryptedEmail, encryptionKey);
 const emailLinks = document.querySelectorAll(".email");
 emailLinks.forEach((link) => {
   link.href = "mailto:" + decryptedEmail + "?subject=[VIA PERSONAL WEBSITE]:";
+});
+
+// course stuff
+const course_button = document.querySelector(".course_button");
+const foundational_courses = document.querySelector(".foundational_courses");
+const computational_courses = document.querySelector(".computational_courses");
+course_button.addEventListener("click", () => {
+  computational_courses.classList.toggle("active");
+  foundational_courses.classList.toggle("active");
 });

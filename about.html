@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>About | Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./images/fav.ico" />
+    <title>About | Ed Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/fav.ico" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/css/about.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,22 +38,10 @@
       referrerpolicy="no-referrer"
     />
 
-    <script src="./js/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
   </head>
 
   <body id="about_top" class="about_background">
-    <a
-      id="up-arrow"
-      href="#about_top"
-      title="Go back up"
-      aria-label="Scroll to Top"
-    >
-      <i
-        title="Scroll to Top"
-        class="fa-solid fa-arrow-up-long fa-2xl icon"
-      ></i>
-    </a>
-
     <noscript class="no_script">
       <h1>Oh no...</h1>
       <h2>
@@ -71,16 +59,12 @@
     </div>
     <aside class="sidebar">
       <nav role="navigation">
-        <h2>Navigate</h2>
-        <a
-          class="icon_parent"
-          href="https://evalid1234.github.io/"
-          target="_self"
-          title="Home"
-        >
-          <span> Home </span>
-          <i class="fa-solid fa-house fa-lg icon" title="Home page"> </i>
-        </a>
+        <h2>Sections</h2>
+        <a class="local_link" href="#home" title="Go to top">About</a>
+
+        <a class="local_link" href="#education" title="Go to top">Education</a>
+        <a class="local_link" href="#tutoring" title="Go to top">Tutoring</a>
+
         <h2>Socials</h2>
         <a
           class="icon_parent"
@@ -99,10 +83,7 @@
           <span>Linkedin</span>
           <i class="fa-brands fa-linkedin fa-xl icon"></i>
         </a>
-        <a class="icon_parent email" href="" title="Contact me">
-          <span>Contact me!</span>
-          <i class="fa-solid fa-xl fa-envelope icon"></i>
-        </a>
+
         <a
           class="icon_parent"
           href="https://evalid1234.github.io/Blog/"
@@ -116,14 +97,21 @@
     </aside>
 
     <div class="mobile_navbar_container about_nav">
-      <img
-        aria-hidden="true"
-        class="logo"
-        height="50px"
-        width="200px"
-        src="images/black_logo.svg"
-        alt="image"
-      />
+      <a
+        class="icon_parent logo_container"
+        href="/"
+        target="_self"
+        title="Home"
+      >
+        <img
+          aria-hidden="true"
+          class="logo"
+          height="50px"
+          width="200px"
+          src="/images/logo.svg"
+          alt="image"
+        />
+      </a>
 
       <div id="about_menu_btn" tabindex="1" class="menu_btn">
         <div id="about_menu_btn_burger" class="menu_btn_burger"></div>
@@ -131,103 +119,64 @@
 
       <nav role="navigation" class="large_navbar_container navbar_items">
         <!-- make this invisible then use an after to take up space-->
-        <a
-          class="icon_parent"
-          href="https://evalid1234.github.io/"
-          title="Home"
-        >
-          <i class="fa-solid fa-house fa-xl icon"></i>
-        </a>
-        <span> | </span>
-        <a
-          class="icon_parent"
-          href="https://github.com/evalid1234"
-          title="My github"
-        >
-          <i class="fa-brands fa-github fa-xl icon"></i>
-        </a>
-        <span> | </span>
-        <a
-          class="icon_parent email"
-          href="mailto:placeholder@gmail.com"
-          title="Contact me"
-        >
-          <i class="fa-solid fa-xl fa-envelope icon"></i>
-        </a>
-        <span> | </span>
-        <a
-          class="icon_parent"
-          href="https://www.linkedin.com/in/eduardo-lagunas/"
-          title="My linkedin"
-        >
-          <i class="fa-brands fa-linkedin fa-xl icon"></i>
-        </a>
+        <a class="local_link" href="#home" title="View about">About</a>
         <span> | </span>
 
+        <a class="local_link" href="#education" title="Vieweducat">Education</a>
+        <span> | </span>
+        <a class="local_link" href="#tutoring" title="Go to top">Tutoring</a>
+        <span> | </span>
         <a
-          class="icon_parent text-center"
+          class="local_link"
           href="https://evalid1234.github.io/Blog/"
           target="_blank"
           title="Blog"
         >
-          <i class="fa-solid fa-blog fa-lg icon" title="Blog page"> </i>
+          Blog
         </a>
       </nav>
     </div>
+
     <main class="about_layout_container container-fluid">
-      <section class="about_main_header slide_in container" role="banner">
-        <header>
+      <section
+        id="home"
+        class="about_main_header slide_in container"
+        role="banner"
+      >
+        <header class="top_visuals">
           <h1>Your Next Top Talent.</h1>
-          <i>
-            <small>Looking to make your ideas come to life.</small>
-          </i>
+          <span class="lighter"
+            ><i> HTML, CSS, GIT, JS, JAVA, SQL, NOSQL, SPRING, REACT </i></span
+          >
+          <a href="mailto:placeholder@gmail.com" aria-label="Hire Me">
+            <span>Connect with me &rarr;</span></a
+          >
         </header>
         <p class="main_header_body">
           <span>
-            I am a forever learning
-            <strong>Full Stack Developer</strong> and former
-            <strong>Tutor</strong>. With extensive knowledge in Web and
-            collaborative technologies, I am a great pick for your next project
-            or team.
+            I'm a passionate and results-oriented person eager to contribute my
+            skills and enthusiasm to your team or next project. I focus on
+            <strong>Full Stack Development</strong>. However, I am also capable
+            with Systems programming tasks and offer
+            <strong>Tutoring</strong> services as well. With extensive knowledge
+            in Web and collaborative technologies, I am a great pick for your
+            next project or team.
           </span>
-          <a href="#contact" class="cta_link" aria-label="Hire Me">
-            <span>Work with me &rarr;</span></a
+
+          <span>
+            Outside of the professional world, I have a passion for learning,
+            athletics and...anime. Most noteably, I love to spend a few hours
+            learning everyday, and working out.
+          </span>
+
+          <a href="/projects.html" class="cta_link" aria-label="View Portfolio"
+            >View Portfolio</a
           >
         </p>
-        <figure>
-          <img
-            class="img img-fluid"
-            src="./images/envelope-4313721.svg"
-            height="50px"
-            width="300px"
-            alt="about image of me"
-          />
-          <figcaption>My ugly mug</figcaption>
-        </figure>
       </section>
 
       <section
-        class="about_about slide_in container"
-        role="region"
-        aria-labelledby="who-am-i"
-      >
-        <header>
-          <h2 id="who-am-i"><b> Who Am I? </b></h2>
-        </header>
-        <p>
-          I'm a passionate and results-oriented person eager to contribute my
-          skills and enthusiasm to your team. Outside of the professional world,
-          I have a passion for learning, athletics and...anime. Most noteably, I
-          love to spend a few hours learning everyday, and hitting the gym.
-        </p>
-
-        <h3><b>Check Out My Projects:</b></h3>
-        <a href="#projects" class="cta_button" aria-label="View Portfolio"
-          >View Portfolio</a
-        >
-      </section>
-
-      <section
+        id="education"
         class="about_education slide_in container"
         role="region"
         aria-labelledby="education"
@@ -238,9 +187,19 @@
 
         <div class="education_body">
           <div class="relevant_courses">
-            <h3>Bachelors: Computer Science</h3>
-            <h4>GPA: 3.72/4.0</h4>
-            <h5>Magna Cum Laude</h5>
+            <h3>
+              Bachelors:
+              <span class="lighter"><small>Computer Science</small> </span>
+            </h3>
+            <h4>
+              GPA: <span class="lighter"><small>3.72/4.00</small> </span>
+            </h4>
+            <h5>
+              Awards:
+              <span class="lighter">
+                <small>Deans List (x3), Magna Cum Laude</small>
+              </span>
+            </h5>
           </div>
           <p class="education_text">
             My academic journey has equipped me with a solid foundation in
@@ -249,10 +208,65 @@
             reflect my dedication to both academic and personal growth.
           </p>
         </div>
+        <div class="course_button_container">
+          <button class="cta_link course_button">View relevant courses</button>
+        </div>
+        <div class="course_container">
+          <ul class="foundational_courses">
+            <h5>Foundational courses</h5>
+            <li class="course">Discrete Math: <span class="grade">B</span></li>
+            <li class="course">
+              Physics with Calculus: <span class="grade">A</span>
+            </li>
+            <li class="course">
+              General Chemistry: <span class="grade">A</span>
+            </li>
+            <li class="course">
+              Calculus & Analytical Geometry 1: <span class="grade">A</span>
+            </li>
+            <li class="course">
+              Calculus & Analytical Geometry 2: <span class="grade">A</span>
+            </li>
+          </ul>
+          <ul class="computational_courses">
+            <h5>Programming courses</h5>
+            <li class="course">
+              Computer Architecture<span class="grade">A</span>
+            </li>
+            <li class="course">
+              Data Structures & Algorithms<span class="grade">A</span>
+            </li>
+            <li class="course">Software Testing<span class="grade">A</span></li>
+            <li class="course">Programming 1 <span class="grade">B</span></li>
+            <li class="course">Programming 2 <span class="grade">A</span></li>
+            <li class="course">
+              Systems Programming <span class="grade">A</span>
+            </li>
+            <li class="course">
+              Principles of Programming Languages <span class="grade">A</span>
+            </li>
+            <li class="course">
+              Database Management 1 <span class="grade">A</span>
+            </li>
+            <li class="course">
+              Advanced Database Management <span class="grade">A</span>
+            </li>
+            <li class="course">
+              Operating Systems Principles<span class="grade">A</span>
+            </li>
+            <li class="course">
+              Theory of Algorithms/Computation <span class="grade">B</span>
+            </li>
+            <li class="course">
+              Net-Centric Computing (Networking) <span class="grade">A</span>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section
-        class="about_contact slide_in container"
+        id="tutoring"
+        class="about_tutoring slide_in container"
         role="region"
         aria-labelledby="tutoring"
       >
@@ -288,17 +302,37 @@
         </div>
 
         <p>
-          <a href="#contact" class="cta_link" aria-label="Contact Me"
+          <a
+            href="mailto:placeholder@gmail.com"
+            class="cta_link"
+            aria-label="Contact Me"
             ><span>Work with me today! &rarr;</span></a
           >
         </p>
       </section>
     </main>
     <footer
-      class="slide_in about_footer container"
+      class="fade_in about_footer container"
       id="footer"
       role="contentinfo"
     >
+      <div class="footer_items">
+        <a
+          class="icon_parent"
+          href="https://github.com/evalid1234"
+          title="My github"
+        >
+          <i class="fa-brands fa-github fa-xl icon"></i>
+        </a>
+
+        <a
+          class="icon_parent"
+          href="https://www.linkedin.com/in/eduardo-lagunas/"
+          title="My linkedin"
+        >
+          <i class="fa-brands fa-linkedin fa-xl icon"></i>
+        </a>
+      </div>
       <p>
         <small> &copy; evalid1234.github.io | 2023.</small>
       </p>
