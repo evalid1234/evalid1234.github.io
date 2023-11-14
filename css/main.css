@@ -1,4 +1,5 @@
 @import "/css/utils/reset.css";
+@import "/css/utils/icon.css";
 @import "/css/utils/navbar.css";
 @import "/css/utils/animations.css";
 @import "/css/utils/cta.css";
@@ -48,8 +49,7 @@ screen and (max-width: 440px);
   --button-border: 1px outset;
   --button-shadow: 2px 2px #d0d0d0;
   --button-link-transitions: 1s linear;
-  --default-icon-size: 1.5rem;
-
+ 
   /* page formatting */
   --title-margin-from-top: 2rem;
   --footer-margin-from-bottom: 2rem;
@@ -287,23 +287,7 @@ body {
   margin: var(--margin-regular);
 }
 
-/* -------------ICONS--------- */
-
-.icon_parent {
-  text-decoration: none;
-}
-
-.icon {
-  display: block;
-  transition: var(--button-link-transitions);
-  color: var(--page-text-color);
-}
-
-.icon:hover,
-.icon:active,
-.icon:focus {
-  color: var(--page-primary-color);
-}
+ 
 
 .splash_text_layout {
   max-width: var(--body-width-large);

@@ -1,6 +1,9 @@
 <h1> Things to do 11/9/23</h1>
 
 <ol> 
+    <li>  
+        Add new Loader...No more font awesome
+    </li>
     <li>
         add js fallback content
      </li>
