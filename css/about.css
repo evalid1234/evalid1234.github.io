@@ -22,7 +22,16 @@ screen and (max-width: 440px);
   /* fonts */
   --about-regular-font-size: calc(1rem * 1.25);
   --title-font-size: calc(1rem * 4);
-  --heading2-font-size: calc(1rem * 1.75);
+  /* --heading2-font-size: calc(1rem * 1.75); */
+
+  --medium-regular-font-size: 1.1rem;
+  --medium-title-font-size: 3rem;
+
+  --mobile-font-size-regular: 1rem;
+  --mobile-title-font-size: 2.5rem;
+
+
+
   --secondary-color: rgb(92, 92, 92);
   --course-text-color: rgb(124, 124, 124);
 
@@ -85,13 +94,7 @@ screen and (max-width: 440px);
   margin: 0;
 }
 
-.logo_container {
-  margin-left: var(--margin);
-}
 
-.large_navbar_container {
-  margin-right: var(--margin);
-}
 
 /* uparrow */
 #up-arrow {
@@ -161,18 +164,7 @@ screen and (max-width: 440px);
   text-decoration: none;
 }
 
-/* 
-.about_main_header p,
-.about_main_header figure {
-  flex: 1 1 50%;
-} */
 
-/* .about_main_header figure {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: var(--about-padding);
-} */
 
 p {
   padding: var(--about-padding);
@@ -349,9 +341,9 @@ p {
   padding-top: var(--navbar-offset-top);
 }
 
-.about_layout_container h2 {
+/* .about_layout_container h2 {
   font-size: var(--heading2-font-size);
-}
+} */
 
 .about_layout_container {
   font-size: var(--about-regular-font-size);
@@ -362,7 +354,9 @@ p {
   color: var(--about-page-text-color);
 }
 
-@media screen and (max-width: 700px) {
+
+
+@media screen and (max-width: 1000px) {
 
   .about_main_header {
     padding-top: var(--navbar-offset-top);
@@ -408,5 +402,58 @@ p {
 
   .relevant_courses {
     flex: 1 1 100%;
+  }
+
+  .about_main_header {
+    align-items: center;
+  }
+
+  .top_visuals {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 765px) {
+  .about_layout_container {
+    font-size: var(--medium-regular-font-size);
+  }
+
+
+  .about_main_header h1 {
+    font-size: var(--medium-title-font-size);
+  }
+
+  .skills {
+    font-size: smaller;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .about_layout_container {
+    font-size: var(--mobile-font-size-regular);
+  }
+
+
+  .about_main_header h1 {
+    font-size: var(--mobile-title-font-size);
+  }
+
+  .skills {
+    font-size: smaller;
+  }
+
+  .desktop_text {
+    display: none;
+  }
+
+  .cta_link {
+    font-size: var(--mobile-font-size-regular);
+  }
+
+  .top_visuals>a {
+    font-size: smaller;
   }
 }
